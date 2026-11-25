@@ -1,0 +1,1195 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA 6 開局攻略集</title>
+<meta name="description" content="GTA 6 開局攻略集：開場設定、17 張金色武器卡、第一章防漏清單、94 項主線任務、車輛與賺錢，可逐項勾選進度。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#E3F1EC; --sheet:#F4FAF7; --ink:#102A3A; --ink-soft:#43616B;
+  --pink:#E94F7C; --teal:#0F7C8A; --sun:#F3B63F; --line:#B7D4CB;
+  --off:#8FA7A8;
+  --font:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:4px}
+
+.shell{max-width:1180px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:clamp(148px,24vw,240px) minmax(0,1fr);gap:clamp(18px,4vw,48px)}
+
+/* 左側導覽 */
+.rail{position:sticky;top:0;align-self:start;padding:40px 0;height:100vh;overflow-y:auto;display:flex;flex-direction:column;gap:28px}
+.brand{font-weight:900;font-size:1.35rem;line-height:1.25;letter-spacing:.02em}
+.brand small{display:block;font-weight:500;font-size:.8rem;color:var(--ink-soft);margin-top:6px;letter-spacing:0}
+.nav{display:flex;flex-direction:column;gap:4px}
+.nav a{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;column-gap:6px;padding:10px 12px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:700}
+.nav .ngrp{font-size:.9rem;font-weight:900;letter-spacing:.12em;color:var(--ink);padding:7px 12px;margin:16px 0 4px;border-left:5px solid var(--pink);background:rgba(0,0,0,.07);border-radius:4px 8px 8px 4px}
+.nav .ngrp:first-child{margin-top:0}
+.nav .ngrp ~ a{padding-left:22px;font-weight:600}
+.nav a:hover{background:#D3E8E0}
+.nav a[aria-current="true"]{background:var(--ink);color:#fff}
+.nav .cnt{font-weight:500;font-size:.85rem;font-variant-numeric:tabular-nums;opacity:.8}
+.meter{margin-top:auto}
+.meter-top{display:flex;justify-content:space-between;font-weight:700;font-size:.9rem}
+.bar{height:10px;border-radius:99px;background:var(--line);overflow:hidden;margin:8px 0}
+.bar i{display:block;height:100%;width:0;background:var(--pink);transition:width .35s ease}
+.meter button{font:inherit;font-size:.85rem;background:none;border:0;color:var(--ink-soft);text-decoration:underline;padding:0;cursor:pointer}
+
+/* 主內容 */
+main{padding:56px 0 96px;max-width:760px}
+.hero h1{text-wrap:balance;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.12;margin:0 0 20px;font-weight:900;letter-spacing:-.01em}
+.hero p{margin:0 0 12px;max-width:34em;color:var(--ink-soft);font-size:1.05rem}
+.hero .sub{font-size:1.15rem;font-weight:900;margin:36px 0 8px}
+.picks{display:grid;gap:12px;margin:32px 0 8px}
+.pick{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:var(--sheet);border-radius:16px;padding:16px 18px}
+.pick b{display:block;font-weight:900}
+.pick div span{color:var(--ink-soft);font-size:.95rem}
+
+section.tab{margin-top:72px;scroll-margin-top:24px}
+section.tab>h2{font-size:2rem;font-weight:900;margin:0 0 6px}
+section.tab>p{margin:0 0 24px;color:var(--ink-soft)}
+.group{background:var(--sheet);border-radius:18px;padding:6px 8px 10px;margin-bottom:20px}
+.group h3{margin:0;padding:16px 12px 8px;font-size:1.05rem;font-weight:900}
+.group h3 small{font-weight:500;color:var(--ink-soft);margin-left:8px;font-size:.85rem}
+.row{display:flex;align-items:center;gap:10px;width:100%;padding:9px 12px;border:0;background:none;font:inherit;color:inherit;text-align:left;cursor:pointer;border-radius:10px}
+.row:hover{background:#E4F1EB}
+.row .lab{flex:0 1 auto}
+.row .dots{flex:1 1 20px;min-width:16px;border-bottom:2px dotted var(--line);transform:translateY(4px)}
+.row .note{display:block;font-size:.82rem;color:var(--ink-soft);line-height:1.4}
+.row .name{display:block}
+.chip{flex:none;min-width:4.2em;text-align:center;padding:3px 14px;border-radius:99px;font-weight:900;font-variant-numeric:tabular-nums;background:var(--ink);color:#fff;font-size:1rem}
+.chip.num{background:var(--pink)}
+.chip.on{background:var(--teal)}
+.chip.off{background:transparent;color:var(--ink-soft);box-shadow:inset 0 0 0 2px var(--off)}
+.chip.pick-c{background:var(--sun);color:var(--ink)}
+.chip small{font-weight:500;font-size:.72rem;margin-left:6px;opacity:.75}
+.tick{flex:none;width:22px;height:22px;border-radius:7px;border:2px solid var(--off);display:grid;place-items:center;color:transparent;transition:background .15s,border-color .15s}
+.row[aria-pressed="true"] .tick{background:var(--pink);border-color:var(--pink);color:#fff}
+.row[aria-pressed="true"] .name{color:var(--ink-soft)}
+
+/* 地圖截圖（以 CSS 從整頁圖裁出地圖區塊） */
+.map{margin:14px 0 4px}
+.crop{position:relative;overflow:hidden;border-radius:12px;background:var(--line)}
+.crop img{position:absolute;display:block;max-width:none;height:auto}
+.map figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:6px}
+/* 可放大的圖片 */
+.zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;font:inherit;color:inherit;text-align:left}
+.zoom:hover .crop,.zoom:hover img{filter:brightness(1.05)}
+#lb{border:0;padding:0;background:transparent;max-width:min(96vw,1100px);max-height:94vh;overflow:visible}
+#lb::backdrop{background:rgba(10,25,35,.82)}
+#lb img{display:block;max-width:100%;max-height:88vh;margin:0 auto;border-radius:10px}
+#lb button{display:block;margin:10px auto 0;font:inherit;font-weight:700;padding:8px 22px;border-radius:99px;border:0;background:var(--sheet);color:var(--ink);cursor:pointer}
+/* 圖庫與卡片 */
+.gal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.gal figure{margin:0}
+.gal img{display:block;width:100%;height:auto;border-radius:10px;background:var(--line)}
+.gal img.sq{aspect-ratio:1/1;object-fit:cover;object-position:50% 57%}
+.gal figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:4px}
+.bul{margin:12px 0 0;padding-left:1.2em}
+.bul li{margin:6px 0}
+.weapon>.gal{margin:12px 0}
+.steps a.ytl{display:inline-block;margin-top:2px;margin-right:12px;font-size:.82rem;font-weight:700;color:var(--teal)}
+.steps .st{margin:10px 0 2px;max-width:640px}
+.steps .st .zoom{border-radius:10px;overflow:hidden}
+.steps .st img{display:block;width:100%;height:auto;border-radius:10px;background:var(--line)}
+.steps .st figcaption{font-size:.85rem;color:var(--ink-soft);margin-top:4px}
+.steps .map{margin:10px 0 2px}
+.steps li.ck{padding-right:96px}
+.steps li.ck .got{position:absolute;right:0;top:10px;padding:4px 12px;font-size:.85rem}
+.steps .q{display:block;color:var(--ink);font-size:.9rem;margin-top:4px;padding-left:10px;border-left:3px solid var(--sun)}
+.steps .warn{display:block;color:var(--ink);background:#FBEFD0;border-radius:8px;padding:6px 10px;font-size:.9rem;margin-top:6px}
+.sub2{margin:16px 0 0;font-size:.95rem}
+.dl{background:var(--sheet);border-radius:14px;padding:12px 18px;margin:0 0 14px}
+.dl b{font-weight:900}
+.dl ol{margin:6px 0 0;padding-left:1.4em;color:var(--ink-soft)}
+.dl li{margin:2px 0}
+@media (max-width:520px){.steps li.ck{padding-right:0}.steps li.ck .got{position:static;margin-top:8px}}
+.tl{list-style:none;margin:0;padding:0 18px 14px;color:var(--ink)}
+.chap .tl{padding:0 14px 14px;color:var(--ink)}
+.chap .tl li{margin:0}
+.tl li{padding:7px 0 7px 3.4em;position:relative;border-top:1px solid var(--line)}
+.tl li:first-child{border-top:0}
+.tl a.t{position:absolute;left:0;top:7px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--teal)}
+.bul .tag{display:inline-block;font-size:.75rem;font-weight:700;padding:1px 8px;border-radius:99px;background:#FBEFD0;margin-right:6px}
+/* 按鍵標籤與技巧 */
+.keys{display:inline-flex;gap:4px;flex-wrap:wrap;vertical-align:middle}
+.k{display:inline-block;min-width:2em;text-align:center;padding:1px 9px;border-radius:8px;background:var(--ink);color:#fff;font-weight:700;font-size:.9rem;font-variant-numeric:tabular-nums}
+.tip{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;padding:14px 0;border-top:1px solid var(--line)}
+.tip:first-child{border-top:0}
+.tip .n{width:34px;height:34px;border-radius:50%;background:var(--pink);color:#fff;font-weight:900;display:grid;place-items:center}
+.tip b{display:block;font-weight:900}
+.tip span.d{color:var(--ink-soft);display:block;font-size:.95rem}
+/* 任務清單 */
+.ms{list-style:none;margin:0;padding:0 18px 14px}
+.ms li{display:flex;align-items:center;gap:10px;padding:6px 0;border-top:1px solid var(--line)}
+.ms li:first-child{border-top:0}
+.ms button{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:10px;width:100%;cursor:pointer;padding:2px 0}
+.ms button:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+.ms .no{flex:none;width:2em;text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-soft);font-weight:700}
+.ms .zh{font-weight:700}
+.ms .en{margin-left:auto;color:var(--ink-soft);font-size:.85rem;text-align:right}
+.ms button[aria-pressed="true"] .zh{text-decoration:line-through;color:var(--ink-soft)}
+.ms .opt{flex:none;font-size:.72rem;font-weight:700;padding:1px 8px;border-radius:99px;box-shadow:inset 0 0 0 2px var(--teal);color:var(--teal)}
+.ms .tbd .zh{color:var(--ink-soft);font-style:italic}
+.chap .cnum{flex:none;min-width:auto}
+/* 設定分類位於 .chap 內：群組卡片改為無底色，避免卡中卡 */
+.chap .group{background:none;margin:0;padding:0 8px 6px}
+.ms button[aria-pressed="true"] .tick{background:var(--pink);border-color:var(--pink);color:#fff}
+/* 任務清單位於 .chap 內，需以較高的選擇器覆寫 .chap 的規則 */
+.chap .ms{padding:0 18px 14px;color:inherit}
+.chap .ms li{margin:0}
+.chap .ms .no{min-width:0;width:2em;padding:0;border-radius:0;background:none;color:var(--ink-soft);text-align:right}
+.chap .ctitle{flex:1;min-width:0}
+.chap .ctitle small{display:block;font-weight:500;font-size:.82rem;color:var(--ink-soft)}
+@media (max-width:480px){.gal{grid-template-columns:1fr}.ms .en{display:none}}
+/* 影片重點 */
+.chap{background:var(--sheet);border-radius:14px;margin-bottom:10px}
+.chap summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:14px;padding:14px 18px;font-weight:900;font-size:1.05rem}
+.chap summary::-webkit-details-marker{display:none}
+.chap summary::after{content:"+";margin-left:auto;font-weight:500;font-size:1.4rem;color:var(--ink-soft)}
+.chap[open] summary::after{content:"−"}
+.chap .no{flex:none;min-width:2.1em;text-align:center;padding:2px 10px;border-radius:99px;background:var(--sun);color:var(--ink);font-variant-numeric:tabular-nums}
+.chap ul{margin:0;padding:0 18px 16px 52px;color:var(--ink-soft)}
+.chap li{margin:4px 0}
+.caveat{background:#FBEFD0;border-radius:12px;padding:12px 14px;margin:0 0 16px;font-size:.95rem}
+/* 武器卡 */
+.weapon{background:var(--sheet);border-radius:18px;padding:20px 22px 22px;margin-bottom:20px}
+.w-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.w-head h3{margin:0;font-size:1.3rem;font-weight:900;line-height:1.3}
+.w-head h3 small{display:block;font-size:.88rem;font-weight:500;color:var(--ink-soft);margin-top:2px}
+.got{flex:none;font:inherit;font-weight:700;font-size:.9rem;padding:6px 14px;border-radius:99px;border:2px solid var(--off);background:none;color:var(--ink-soft);cursor:pointer}
+.got:hover{border-color:var(--ink)}
+.got[aria-pressed="true"]{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.w-meta{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:14px 0 6px;font-size:.95rem}
+.w-meta dt{font-weight:700}
+.w-meta dd{margin:0;color:var(--ink-soft)}
+.steps{list-style:none;margin:16px 0 0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:12px 0 12px 44px;border-top:1px solid var(--line)}
+.steps li::before{content:counter(s);position:absolute;left:0;top:12px;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-weight:900;display:grid;place-items:center;font-size:.9rem}
+.steps b{display:block;font-weight:900}
+.steps span{color:var(--ink-soft);display:block}
+.w-note{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:#FBEFD0;color:var(--ink);font-size:.95rem}
+.w-note b{font-weight:900}
+.qa{display:grid;gap:12px}
+.qa div{background:var(--sheet);border-radius:16px;padding:16px 18px}
+.qa dt{font-weight:900;margin-bottom:4px}
+.qa dd{margin:0;color:var(--ink-soft)}
+.src{margin-top:72px;border-top:2px solid var(--line);padding-top:24px;color:var(--ink-soft);font-size:.92rem}
+.src li{margin:6px 0}
+
+@media (max-width:700px){
+  .nav a{padding:8px 9px;font-size:.92rem}
+  .brand{font-size:1.15rem}
+}
+/* 只有真正的手機寬度才把導覽移到上方，且改成一列可橫向捲動 */
+@media (max-width:520px){
+  .shell{display:block}
+  .rail{position:static;height:auto;overflow:visible;padding:24px 0 0;gap:14px}
+  .nav{flex-direction:row;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding-bottom:6px;scrollbar-width:thin}
+  .nav a{flex:0 0 auto;white-space:nowrap;background:var(--sheet)}
+  .nav .ngrp{display:none}
+  .meter{margin-top:0}
+  main{padding-top:24px}
+}
+@media (max-width:480px){
+  .row{flex-wrap:wrap}
+  .row .dots{display:none}
+  .row .lab{flex:1 1 60%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i,.tick{transition:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="rail">
+    <div class="brand">GTA 6<br>開局攻略集<small>設定、金色武器、開局十件事</small></div>
+    <nav class="nav" id="nav" aria-label="設定分類"></nav>
+    <div class="meter">
+      <div class="meter-top"><span>已完成</span><span id="meterTxt">0 / 0</span></div>
+      <div class="bar" role="progressbar" aria-label="套用進度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="meterBar"></i></div>
+      <button type="button" id="reset">清除勾選</button>
+    </div>
+  </aside>
+
+  <main>
+    <header class="hero">
+      <h1>開局攻略集：從設定到 94 項任務</h1>
+      <p>整理自多篇社群貼文與 6 支 YouTube 影片：開場設定、17 張金色／稀有武器卡（步驟附截圖）、隱藏地點、收藏卡片、操作技巧、摔角手與下車技巧、第一章結束前要做的 17 件事、五章任務清單、車輛與賺錢（逐段整理）、社群小技巧與規則、隨機事件與彩蛋、社群賺錢與載具（9 則，同主題的已合併）、GTABase 互動地圖用法，以及開局十件事。章節已依建議的觀看順序排列：先設定與開局十件事，再操作、第一章、主線，最後是收集、車輛與賺錢。點每一列、每把武器或每個任務可標記進度，進度只存在這個瀏覽器。</p>
+      <details class="chap" style="margin:0 0 16px"><summary>怎麼讀這份攻略（通用說明）</summary>
+        <div style="padding:0 18px 16px"><ul class="bul">
+          <li>影片與短片的內容，我只讀<b>畫面上的燒錄字幕與畫面</b>，沒有聽語音；每章會寫取樣間隔，兩次取樣之間的話我沒讀到。</li>
+          <li>簡體字幕已轉成繁體；人名、地名、武器名依各來源字幕，不同來源譯名可能不同，不是官方名稱，請以遊戲內為準。</li>
+          <li>標「留言說法・未驗證」的是貼文留言，我沒有交叉驗證，說法互相矛盾時並列。</li>
+          <li>各來源大多沒有座標，我不編造；有地圖畫面的才附截圖，也可用「GTABase 地圖用法」章的互動地圖找位置。</li>
+          <li>「▶ 影片」連結的秒數是我實際看到畫面的秒數，可能與影片描述欄章節不同。</li>
+          <li>截圖取自影片或社群貼文，版權屬原作者，僅供個人參考。遊戲更新後，Bug 與賺錢方法可能失效。</li>
+        </ul></div></details>
+      <h2 class="sub">設定篇的三個重點</h2>
+      <p>作者說明：改完可以再微調，每個人的習慣不同。</p>
+      <div class="picks">
+        <div class="pick"><span class="chip num">0</span><div><b>鏡頭跟隨速度全部歸零</b><span>貼文影片主題是「畫面不暈不晃」，鏡頭分頁的跟隨與晃動項目幾乎都是 0 或關閉。</span></div></div>
+        <div class="pick"><span class="chip num">14</span><div><b>環視與瞄準靈敏度拉到 14</b><span>瞄準加速設為 0，瞄準反應曲線選「精準」。</span></div></div>
+        <div class="pick"><span class="chip on">開啟</span><div><b>保留輔助瞄準與鎖定</b><span>輔助瞄準強度 4、鎖定時間 4，射擊輔助與快速拔出皆開啟。</span></div></div>
+      </div>
+    </header>
+
+    <div id="tabs"></div>
+
+    <section class="tab" id="faq">
+      <h2>留言區的常見問題</h2>
+      <p>整理自貼文留言，作者回覆為主。</p>
+      <dl class="qa">
+        <div><dt>可以直接照著改嗎？</dt><dd>可以，改完再微調。也有留言建議先不改、玩一段時間，再逐項試推薦值，比較差異。</dd></div>
+        <div><dt>左操控桿盲區一定要設 7 嗎？</dt><dd>不一定。作者回覆看個人習慣，截圖中左右盲區都是 1。</dd></div>
+        <div><dt>開車有第一人稱或車內第三人稱嗎？</dt><dd>作者回覆：目前只有電影模式的自動駕駛看得到車內畫面。</dd></div>
+        <div><dt>切換瞄準目標很慢怎麼辦？</dt><dd>作者建議自動鎖定後，躲在掩體重新瞄準，通常還蠻準。</dd></div>
+        <div><dt>GTA 5 可以套用嗎？</dt><dd>留言建議先玩玩看，GTA 5 不太需要調設定。</dd></div>
+        <div><dt>相關串文提到的「控制模式」</dt><dd>其他使用者在相關串文建議在設定裡把控制模式選「經典」。這不在上面的截圖內，請自行確認。</dd></div>
+      </dl>
+    </section>
+
+    <section class="tab" id="tips">
+      <h2>開局十件事：存檔、專注、後備箱到買車庫</h2>
+      <p>整理自 Threads 貼文（@game_tom777）附的影片，共 4 分 36 秒，分成 10 個章節；原影片標題是「開局別一直刷錢」。</p>
+      <p class="caveat">取樣約每 8 到 10 秒，句子可能不完整（通用說明見頁首「怎麼讀這份攻略」）。重要細節請以影片為準。</p>
+      <details class="chap"><summary><span class="no">01</span>手動存檔</summary><ul>
+        <li>同一個任務，走法會不一樣；想回頭只能讀之前的手動檔。</li>
+        <li>字幕提到第一章結尾，以及「沒法從選單裡重玩」。</li>
+        <li>全遊戲只有 15 個手動存檔位；自動存檔會蓋掉舊檔。</li>
+        <li>建議需要時就新存一個。</li></ul></details>
+      <details class="chap"><summary><span class="no">02</span>裝消音器</summary><ul>
+        <li>字幕：第二件事就是買消音器。畫面為武器改裝頁的「槍口與消音器」分類。</li></ul></details>
+      <details class="chap"><summary><span class="no">03</span>專注模式</summary><ul>
+        <li>同時按兩個搖桿（L3 + R3）開啟。</li>
+        <li>隔著牆也能看見目標。</li>
+        <li>養成隨時開專注模式的習慣。</li></ul></details>
+      <details class="chap"><summary><span class="no">04</span>作息健身</summary><ul>
+        <li>字幕：第四件事是把每天的作息當回事。</li>
+        <li>角色的體力、專注等屬性，需要定期鍛鍊才保得住。</li></ul></details>
+      <details class="chap"><summary><span class="no">05</span>後備箱</summary><ul>
+        <li>畫面顯示「4 把」，推測是後備箱可放的武器數，字幕未明講，請自行確認。</li>
+        <li>就算中途換了一輛自己的車也適用。</li>
+        <li>衣櫃可把衣服放進後備箱，最多 5 套。</li></ul></details>
+      <details class="chap"><summary><span class="no">06</span>先變裝</summary><ul>
+        <li>動手之前先變裝。</li>
+        <li>警察現在不會顯示在小地圖上。</li>
+        <li>趁這時候避開警察視線，鑽進小巷。</li></ul></details>
+      <details class="chap"><summary><span class="no">07</span>打腿別打頭</summary><ul>
+        <li>字幕：打中腦袋和心臟是直接要命。</li>
+        <li>字幕也提到，開槍打頭還是打腿，都會影響結局。</li></ul></details>
+      <details class="chap"><summary><span class="no">08</span>別急著離島</summary><ul>
+        <li>前期別急著離開 Key Lento。</li>
+        <li>島上有街機可玩，字幕提到「錯過就沒了」。</li></ul></details>
+      <details class="chap"><summary><span class="no">09</span>別埋頭刷錢</summary><ul>
+        <li>字幕提到手裡的錢會被清空（畫面顯示 $0），也提到 Jason 和 Lucia 的錢會被清空。</li>
+        <li>前後文沒取樣完整，觸發條件不明，請看影片確認。</li></ul></details>
+      <details class="chap"><summary><span class="no">10</span>買車庫</summary><ul>
+        <li>攢下的第一筆大錢先買車庫。</li>
+        <li>平時在街上順來的車不算你自己的；登記好以後才算。</li>
+        <li>登記、車庫、追蹤器的說明見「<a href="#cars">車輛與賺錢</a>」章的名詞說明。</li></ul></details>
+    </section>
+
+    <section class="tab" id="moves">
+      <h2>10 個操作技巧（PS5）</h2>
+      <p>整理自你提供的圖片，圖上標示為「PS5 操作」。作者不明。</p>
+      <div class="weapon" style="padding-top:6px">
+        <div class="tip"><span class="n">1</span><div><b>連按兩次 <span class="keys"><span class="k">△</span></span>：下車不熄火</b></div></div>
+        <div class="tip"><span class="n">2</span><div><b>左右方向鍵：打方向燈</b></div></div>
+        <div class="tip"><span class="n">3</span><div><b>車內長按 <span class="keys"><span class="k">○</span></span>：躲低身體</b></div></div>
+        <div class="tip"><span class="n">4</span><div><b>車內按 <span class="keys"><span class="k">R3</span></span>：對路人大吼</b></div></div>
+        <div class="tip"><span class="n">5</span><div><b>車內按 <span class="keys"><span class="k">□</span></span>：甩車門撞人</b></div></div>
+        <div class="tip"><span class="n">6</span><div><b><span class="keys"><span class="k">L2</span><span class="k">R1</span></span> 同按：對路人比中指</b></div></div>
+        <div class="tip"><span class="n">7</span><div><b><span class="keys"><span class="k">L2</span><span class="k">R3</span></span> 同按：原地切換第一人稱</b><span class="d">手放開就會自動解除。</span></div></div>
+        <div class="tip"><span class="n">8</span><div><b>買耳機後：走路也能聽電台</b></div></div>
+        <div class="tip"><span class="n">9</span><div><b>地圖上的深藍色建築：可能有室內空間</b></div></div>
+        <div class="tip"><span class="n">10</span><div><b>近戰模式（實用格鬥技巧）</b>
+          <span class="d"><span class="keys"><span class="k">R2</span></span> 正面抓脖子（Clinch）</span>
+          <span class="d"><span class="keys"><span class="k">R2</span><span class="k">□</span></span> 長按「□」：裸絞（圖中字跡模糊，依字形判讀）</span>
+          <span class="d"><span class="keys"><span class="k">R2</span><span class="k">□□</span></span> 再加方向鍵往後：過肩摔</span>
+          <span class="d">德式背摔、摔角手面具等見「<a href="#wrestle">摔角手與下車技巧</a>」。</span></div></div>
+      </div>
+      <details class="chap" style="margin-top:12px"><summary>看原圖</summary>
+        <div style="padding:0 18px 16px"><button type="button" class="zoom" data-full="assets/tips/ten-tips.webp" aria-label="放大看原圖"><img src="assets/tips/ten-tips.webp" alt="GTA6 10 個實用隱藏技巧原圖" loading="lazy" style="display:block;width:100%;height:auto;border-radius:10px"></button></div></details>
+      <details class="chap" style="margin-top:12px"><summary>快速移動：自動開車、計程車、覓騎、打電話</summary>
+        <div style="padding:0 18px 16px"><ul class="bul">
+          <li><b>電影模式自動開車：</b>Instagram @game_tom777「開局必看攻略」0:01 到 0:18 字幕：「打開電影模式就能自動開車了」「這遊戲是有自動開車的」。</li>
+          <li><b>離車很遠不要叫計程車：</b>同一支影片字幕：「如果你離車子很遠，不要打出租」；叫車確認畫面有「更換目的地」「確認（$90）」「取消行程」，字幕：「特別貴！」（0:14 到 0:53）。</li>
+          <li><b>改打電話給聯絡人：</b>字幕：「車子壞了也是，直接打給他」「直接打給聯絡人裡的喬伊」（約 0:21、1:00 到 1:07，畫面是手機聯絡人）。從上下文看應該是叫回自己的車，但字幕沒明講。</li>
+          <li><b>覓騎 App：</b>社群貼文（Threads @su_o925）說路程好幾公里可以用 App「覓騎」快速略過，只要 $100。</li>
+          <li>$90（影片畫面）與 $100（貼文）兩個價格對不上。<span class="tag">留言說法・未驗證</span>有人說覓騎隨便一次都幾百塊，可能依距離計價；另一位說付完錢後下車、把司機拉出車外、打倒搜刮、開車閃人，就能搭免費的。</li>
+        </ul></div></details>
+    </section>
+
+    <section class="tab" id="community">
+      <h2>社群小技巧與規則</h2>
+      <p>兩則通用的社群內容：5 個實用小技巧與冷知識、撞球規則。留言說法我都標「留言說法・未驗證」。彩蛋與事件在「隨機事件與彩蛋」，賺錢與載具在「社群賺錢與載具」。</p>
+
+      <details class="chap" open><summary><span class="no cnum">1</span><span class="ctitle">5 個實用小技巧與冷知識<small>@su_o925 的貼文（文字，無圖）</small></span></summary>
+        <div style="padding:0 18px 16px"><ol class="steps">
+          <li><b>車子開起來太飄：控制器盲區調成 7</b><span>作者說體感會好很多。</span><span class="q"><span class="tag">留言說法・未驗證</span>另一位留言者把盲區改成 0，覺得車更好開，高速時還會把左搖桿推到最前面微調；也有人問「控制器盲區是調整什麼的」，沒人回答。兩種說法相反，請自己試。</span></li>
+          <li><b>地圖拉到最近，房子呈灰藍色代表可以進去</b><span>貼文沒有附圖。</span></li>
+          <li><b>白色武器會消失，藍色與金色武器永久存在</b><span class="q"><span class="tag">留言說法・未驗證</span>有人問「綠色槍也是永久嗎」，沒有回覆；另一位說自己的黃金消音步槍突然不見了，想回原本房子拿也打不開。</span></li>
+          <li><b>第二章睡覺的地方有 3 張卡片、2 本雜誌可以拿</b><span>到了第三章就進不去了。貼文沒有說是哪一間，我沒有找到來源。</span></li>
+          <li><b>兩台車都想開走：讓另一半上另一台跟在後面</b><span>貼文沒有附圖，操作細節沒有說明。</span></li>
+        </ol>
+        <p class="sub2">原貼文另有 3 點已併入相關章節：沒錢登記先買車庫 → <a href="#cars">車輛與賺錢</a>的名詞說明與「怎麼偷車與登記」；第一章存家庭儲蓄 $5,000 → <a href="#chapter1">第一章要做的事</a>；覓騎快速略過 $100 → <a href="#moves">操作技巧</a>的「快速移動」。</p></div></details>
+
+      <details class="chap"><summary><span class="no cnum">2</span><span class="ctitle">撞球（8 號球）規則懶人包<small>Threads @andrewjao.0222，文字</small></span></summary>
+        <div style="padding:0 18px 16px">
+          <p>貼文說 GTA 6 的撞球是標準 8 號球。我只讀到貼文的文字，內容如下：</p>
+          <ul class="bul">
+            <li>開球後桌面是「開放」的，先打進球的人決定花色。</li>
+            <li>分到小花（1 到 7）或大花（9 到 15）後，先把自己那組全部打進袋。</li>
+            <li>最後打進黑 8 就贏。</li>
+            <li>自己那組還沒清完就把黑 8 打進袋，直接判輸。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說按 L3 + R3 會提示檯面上哪些球可以打。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說最後打進 8 號球但母球也洗袋，對手還沒打完，被判輸（這是 8 號球常見規則：黑 8 與母球同時進袋判輸，貼文沒有寫這條）。</li>
+          </ul>
+        </div></details>
+    </section>
+
+    <section class="tab" id="wrestle">
+      <h2>摔角手：德式背摔、下車不熄火、面具</h2>
+      <p>整理自一支 5 分 40 秒的影片（標題：浪子回頭不再犯罪，轉行當摔角手…德式背摔教學）。描述欄章節：0:20 德式背摔按法、0:55 各種有趣動作、1:33 下車不熄火小技巧、2:40 街頭幹架、3:03 摔角手面具位置。按鍵與步驟都是我讀畫面上的燒錄字幕與按鍵提示得來，點「▶ 影片」可對照。</p>
+      <p class="caveat">按鍵提示出現過「□/O（經典模式）」，意思是經典操作模式下用 □ 或 ○ 鍵，預設模式是哪一顆我沒讀到。取樣約每 5 到 8 秒；打摔角手的過程（約 3:50 到 4:55）沒有字幕，只有畫面，打法細節請看影片。操作技巧章的近戰（抓脖子、裸絞）是另一個來源的按鍵說明。</p>
+      <div id="wrList"></div>
+    </section>
+
+    <section class="tab" id="chapter1">
+      <h2>第一章結束前要做的事</h2>
+      <p>整理自玫玫物語的影片（8 分 38 秒），作者說這些事「錯過就回不去」，要在 3 個任務時間點之前做完，另有 2 件要在任務進行中當下拿。下面照影片順序逐項寫出做法、地點與字幕原話，點「▶ 影片」可跳到那一秒對照。遊戲裡任務不能重玩（影片 0:14）。</p>
+      <div class="dl"><b>3 個時間點＋2 件任務中才拿得到的</b>
+        <ol>
+          <li>接露西亞出獄之前：五件差事、修家三處（露西亞好感）</li>
+          <li>處理唐尼的車之前：唐尼的墨鏡、後車廂的獨特 .38 左輪</li>
+          <li>開始主線任務「遊客陷阱」之前：存家庭儲蓄、雪莉的車與三醺酒行藏錢、露西亞冥想、五本書</li>
+          <li>任務進行中：露西亞的太陽眼鏡（「一日解放」遊艇上）、安蒂的外套（第一章最後逃離警察時）</li>
+        </ol></div>
+      <figure class="st" style="max-width:640px;margin:0 0 14px"><button type="button" class="zoom" data-full="assets/frames/c1-overview.jpg" aria-label="放大：作者的防漏清單"><img src="assets/frames/c1-overview.jpg" alt="第一章結束前防漏清單：露西亞好感、獨特 .38 左輪、錢跑車收藏、露西亞太陽眼鏡、安蒂的外套" loading="lazy" style="display:block;width:100%;height:auto;border-radius:10px"></button><figcaption>作者的總覽圖「第一章結束前 防漏清單」（影片 0:27）：5 個方塊</figcaption></figure>
+      <p class="caveat">影片標題寫「12 件事」，但總覽圖只有上面 5 個方塊，沒有逐條編號，我讀不出作者怎麼數到 12，所以依影片內容展開成下面 17 個動作，數字對不上標題，請以影片為準。取樣約每 7 到 15 秒，沒讀到的細節寫「影片沒取樣到」。</p>
+      <div id="ch1List"></div>
+    </section>
+
+    <section class="tab" id="missions">
+      <h2>主線任務清單：5 章 94 項</h2>
+      <p>整理自 Threads 貼文（@cychenac）。中文任務名是攻略整理的參考譯名，不是官方名稱，遊戲裡看到的可能不同。<b>內含劇情劇透</b>，章節預設收合。</p>
+      <p class="caveat">兩處譯名有出入：第一章「Recalibration」該貼文寫「重新調整」，台灣攻略站多半寫「重新整頓」。第二章「Breakfast Run」是早餐外送，「Checking Out」是退房時刻。第四章最後一項與第五章最後一項的名稱尚未確認。</p>
+      <div id="missionList"></div>
+    </section>
+
+    <section class="tab" id="gtabase">
+      <h2>GTABase 互動地圖怎麼用</h2>
+      <p>GTABase（gtabase.com）是 GTA 資料庫網站，GTA 6 專區有互動地圖、載具、武器、任務、角色、動物、電台、100% 檢查表、秘技與操作說明。這個攻略集裡「沒有座標」的東西，大多可以在它的互動地圖上找位置。下面是我實際開啟網站看到的畫面與操作，介面是英文。</p>
+      <figure class="fig" style="margin:0 0 14px"><button type="button" class="zoom" data-full="assets/tips/gtabase-map.jpg" aria-label="放大：GTABase 互動地圖"><img src="assets/tips/gtabase-map.jpg" alt="GTABase 互動地圖：左側分類、右側地圖" loading="lazy" style="max-width:100%;border-radius:10px"></button><figcaption>互動地圖畫面：左邊是分類清單與搜尋框，右邊是地圖與縮放按鈕（截圖時還有一則活動公告）。</figcaption></figure>
+
+      <details class="chap" open><summary><span class="no cnum">1</span><span class="ctitle">開啟與基本操作</span></summary>
+        <div style="padding:0 18px 16px"><ol class="steps">
+          <li><b>開 gtabase.com/gta-6/map/</b><span>也可以從首頁上方導覽列點「GTA 6」再點「Map」。</span></li>
+          <li><b>左邊是分類，右邊是地圖</b><span>地圖右上有 + / − 縮放、全螢幕與資訊按鈕；左上角箭頭可以收合左側面板。</span></li>
+          <li><b>用搜尋框找東西</b><span>搜尋框寫「Search locations or categories」，可以輸入地點名稱或分類名稱（英文）。</span></li>
+          <li><b>點分類名稱可以顯示或隱藏那一類</b><span>我點了「Unique Weapons」，該列變灰、圖示消失；再點一次就回來。上方「HIDE ALL」全部隱藏，「HIDE FOUND」隱藏你已勾選找到的。</span></li>
+          <li><b>點地圖上的圖示會彈出說明卡</b><span>卡片有：名稱、分類、文字說明、「FOUND」勾選框、新增者與截圖作者、「ADD SCREENSHOT」（補截圖）、「REPORT A PROBLEM」（回報錯誤）。我點的收藏卡例子：「America's Next Top Hooker Card: Drake」，說明「Next to the chair by the campfire, near the tents.」（營火旁的椅子旁邊，帳篷附近）。卡片右下角有「1/13」的頁碼，我推測是同一類 13 筆之間切換，沒有進一步驗證。</span></li>
+        </ol></div></details>
+
+      <details class="chap" open><summary><span class="no cnum">2</span><span class="ctitle">進度紀錄</span></summary>
+        <div style="padding:0 18px 16px"><ul class="bul">
+          <li>每個分類旁有「找到 / 總數」，例如 Garages 0/14、Safes 0/91。在說明卡勾「FOUND」就會累計。</li>
+          <li>頁面寫：追蹤進度免費，訪客存在瀏覽器裡，登入 MyBase 會員則可在所有裝置同步。我沒有登入，所以沒有測試 MyBase。</li>
+          <li>清單最下面有「RESET PROGRESS」，會重置進度；按之前先想清楚。</li>
+          <li>訪客進度存在瀏覽器，清除網站資料或換瀏覽器就會不見。</li>
+        </ul></div></details>
+
+      <details class="chap"><summary><span class="no cnum">3</span><span class="ctitle">左側分類對照（我的翻譯，非官方）</span></summary>
+        <div style="padding:0 18px 16px">
+          <p>頁面標示共 4,473 個地點、102 個分類（頁面寫更新於 2026 年 11 月 24 日；數字會隨更新改變）。和這份攻略相關的分類：</p>
+          <ul class="bul">
+            <li><b>Weapons → Unique Weapons（103）：</b>獨特武器，找金色或傳說武器位置先看這一類。另有 Ammu-Nations（24，槍店）、Weapon Pickups（58，場景拾取武器）。</li>
+            <li><b>Collectible Cards（19 個子類）：</b>收藏卡，對應「收藏卡片」那一章，例如 America's Next Top Hooker 13、Backyard Wrestling 15、Vice City Narcos 12。</li>
+            <li><b>Collectibles：</b>收集品，包含 Luxury Watches（17，名表）、Magazines &amp; Books（90，雜誌與書）、Hidden Package（115，隱藏包裹）、Meteorites（73，隕石）、Treasures（5，寶藏）、Stunt Jumps（130，特技跳躍）。</li>
+            <li><b>Vehicles：</b>載具，包含 Standout Vehicles（281，特色載具）、Vehicle Spawns（63，載具刷新點）、Vehicle Requests（17，載具委託）、Mod Shops（14，改裝店）、Pay 'n' Sprays（19，噴漆店）。</li>
+            <li><b>Robberies：</b>搶劫，包含 Banks（22，銀行）、Safes（91，保險箱）、Fences（14，銷贓商）、Smash 'n' Grabs（35，砸窗搶劫）、Towable ATMs（99，可拖走的提款機）、Illegal Operations（41，非法勾當）。</li>
+            <li><b>Personal：</b>Garages（14，車庫）、Safehouses（6，安全屋）。</li>
+            <li><b>Activities / Style / Food &amp; Drink / Local Places：</b>活動（籃球、釣魚、競速等）、服飾與髮型、餐飲、地標與警局等。</li>
+          </ul>
+          <p class="sub2">以上分類名稱是我看到的英文名；中文是我自己的翻譯，遊戲內繁中名稱可能不同。</p>
+        </div></details>
+
+      <details class="chap"><summary><span class="no cnum">4</span><span class="ctitle">搭配這份攻略的用法建議</span></summary>
+        <div style="padding:0 18px 16px"><ul class="bul">
+          <li>金色／傳說武器：先看本站金色武器卡的步驟，再用 Unique Weapons 分類看地圖位置，兩邊對照。</li>
+          <li>只想看某一類：先「HIDE ALL」，再只點開要的分類，避免圖示太多看不清。</li>
+          <li>影片只給地圖畫面、沒有座標的地點（例如車輛與賺錢裡的貨櫃倉儲場、安柏西亞），可以用地圖搜尋地名或分類找近似位置。這是我的建議用法，我沒有逐一在 GTABase 上比對，不保證能對到。</li>
+          <li>地圖資料有社群投稿成分（有「Suggest location」與「Report a problem」），地點可能有誤或過時，以遊戲內為準。</li>
+        </ul></div></details>
+
+      <details class="chap"><summary><span class="no cnum">5</span><span class="ctitle">其他功能與要注意的事</span></summary>
+        <div style="padding:0 18px 16px"><ul class="bul">
+          <li>左下按鈕：Suggest Location（建議新地點）、Personal Marker（自己的標記）、Map Contest（地圖活動，頁面寫到 2026-11-28 止）、Feedback（意見回饋）。這些多半需要登入，我沒有登入，沒有測試。</li>
+          <li>網站導覽還有：Vehicles（載具資料庫）、Weapons（武器）、Missions（任務）、Characters（角色）、Animals（動物）、Radio（電台）、Strangers（陌生人任務）、100% Checklist（100% 檢查表）、Cheats（PS5／Xbox 秘技）、Controls（操作按鍵）。</li>
+          <li>網站首頁另有英文文章，例如近戰、提款機、警方通緝等主題。</li>
+          <li>網站有廣告；英文介面，網頁可用瀏覽器的翻譯功能。</li>
+        </ul></div></details>
+    </section>
+
+    <section class="tab" id="events">
+      <h2>隨機事件與彩蛋</h2>
+      <p>社群分享的隨機事件、彩蛋與影片整理，共 4 則。多半沒有座標，位置請搭配「GTABase 地圖用法」章節找。留言說法我都標「留言說法・未驗證」。</p>
+
+      <details class="chap"><summary><span class="no cnum">1</span><span class="ctitle">開局必看攻略：自動開車、計程車、金幣、救人與事件（影片）<small>Instagram @game_tom777 的 Reel（3 分 7 秒，簡體字幕已轉繁體）</small></span></summary>
+        <div style="padding:0 18px 16px">
+          <p class="caveat">取樣約每 7 到 8 秒，句子的前後文有缺；「（）」內是我讀到的畫面。留言區 81 則我沒有讀。</p>
+          <ul class="bul">
+            <li><b>0:01 到 1:07　自動開車、計程車、打電話：</b>已移到<a href="#moves">操作技巧</a>章的「快速移動」。</li>
+            <li><b>1:30 到 1:54　飛機失事事件：</b>已合併到下方「飛機失事事件」。</li>
+            <li><b>0:03 與 0:05　開場預告：</b>字幕：否則錯過最「難看」的畫面！（碼頭邊）；和至少 5000 美元！（用高壓水槍沖洗船身）。這兩句的前後文我沒讀到，不知道指什麼。</li>
+            <li><b>0:28　初始島的搶劫機會：</b>字幕：第二點說一下初始島上這個搶劫機會（畫面是地圖上的標記）。</li>
+            <li><b>0:36 與 0:43　搶店要快：</b>字幕：一定要動作快，因為警察來得特別快；而且這個時候是可以進店瘋狂搜刮的。</li>
+            <li><b>0:50 到 1:03　水下 4 個金幣：</b>字幕：這個地方一共能拿 4 個金幣；位置分別在這裡；第四個在船裡，游進來就能看到。畫面是水下。</li>
+            <li><b>1:10 到 1:14　救受傷的潛水 NPC：</b>字幕：提前在受傷的 NPC 旁邊…就能完美救下這個 NPC。中間的步驟我沒讀到。</li>
+            <li><b>1:22　「第四點就是你去做…」：</b>字幕只讀到這半句（畫面是地圖上的標記），後面沒讀到。</li>
+            <li><b>2:10 到 2:26　人猿（大腳怪）事件：</b>字幕：會在路上遇到一個人猿；記得在遠處先用手機拍照；就能發現有一個人形的樹。</li>
+            <li><b>2:34 到 2:42　ATM 與電話：</b>字幕：後面在 ATM 機會發現一個啟示；電話打過去就能開啟後續劇情了。</li>
+            <li><b>2:50 到 2:58　夜店 919：</b>字幕：男女主會來到罪惡城最大的夜店 919；找不到路，你就可以挨個門進去一遍。</li>
+            <li><b>3:05　結尾：</b>字幕：我是一點沒興趣，咱就不放出來了。</li>
+          </ul>
+          <p class="sub2">部分字幕的時間點因為我是跳著取樣，同一句字幕出現在好幾個取樣點，區間是我推測的；請以影片為準。</p>
+        </div></details>
+
+
+      <details class="chap"><summary><span class="no cnum">2</span><span class="ctitle">飛機失事事件（救護車、金色狙擊槍）<small>Threads @john_liu818（文字）＋ Instagram @game_tom777 影片 1:30</small></span></summary>
+        <div style="padding:0 18px 16px">
+          <ol class="steps">
+            <li><b>看到飛機失事，先拿失事後掉落的東西</b><span>之後會有人開槍，記得先躲在旁邊。</span></li>
+            <li><b>等救護車來，救護人員下車後，把救護車開走</b><span>沿著路往外開。</span></li>
+            <li><b>路邊會觸發彩蛋：獵人誤射一個平民</b><span>上前協助，再開他的車把車趕走，他留在地上的是金色狙擊槍。</span></li>
+          </ol>
+          <ul class="bul">
+            <li>貼文沒有說在哪個章節、哪個位置，也沒有附座標。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說不用開救護車，開任意一台四人座的車也會遇到。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說答應載傷者去醫院、送到醫院也會給槍；另一位說送的路上他和朋友吵架，轟了對方再送到醫院，也會把狙擊槍給你。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說這其實是連續碰到兩件不同的隨機事件。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人把毒販都殺了就離開，作者回覆「真的是你的決定，結果會不一樣」。</li>
+            <li><b>影片（Instagram @game_tom777「開局必看攻略」）1:30 到 1:54：</b>字幕：你能看到天空中有一架飛機失事；到了別管飛行員，他死定了；打完他們還能搜個一兩百美元；趕快跑，警察來得很快；他會在後面把錢放在你的郵箱裡。「誰把錢放進郵箱」我讀不出來。這支影片與 @john_liu818 貼文是否同一事件，影片沒說。</li>
+          </ul>
+        </div></details>
+
+      <details class="chap"><summary><span class="no cnum">3</span><span class="ctitle">外星人彩蛋與永久屬性（影片，標題「練全狀態」）<small>Threads @chen.lun.71 轉貼 @game_tom777 的影片（3 分 51 秒，簡體字幕已轉繁體）</small></span></summary>
+        <div style="padding:0 18px 16px">
+          <p class="caveat">影片很暗，約每 15 秒取樣一次，句子只有片段，前後文有缺。</p>
+          <ul class="bul">
+            <li><b>0:02</b>　字幕：教大家獲得永久的屬性提升。畫面是在健身房跑步機上，左側出現「專注上限已提升」「體力值上限已提升」「生命值上限已提升」三項提示。</li>
+            <li><b>0:05</b>　字幕：第一個是全三維屬性。</li>
+            <li><b>0:15</b>　字幕：外星人逮捕一個肥胖少女的彩蛋。</li>
+            <li><b>0:30</b>　字幕：因為接下來的場景比較黑。</li>
+            <li><b>0:45</b>　字幕：這個密碼呢是由 1234 四個數字組成的。畫面有「RESTRICTED AREA」告示。</li>
+            <li><b>1:00</b>　字幕：就可以在這裡亂輸。畫面是門禁，左上角有一張密碼對照表，字太小讀不出。</li>
+            <li><b>1:30</b>　字幕：離開這個地下研究基地。</li>
+            <li><b>1:45 到 2:00</b>　畫面是碟形飛行物與墜毀處，這兩個畫面沒有字幕。</li>
+            <li><b>2:15</b>　字幕：第一個家的上方。畫面是地圖。</li>
+            <li><b>2:30</b>　字幕：如果大家找不到這個污水廠的位置。畫面是地圖上的標記區域。</li>
+            <li><b>2:45</b>　字幕：我們不要出去硬剛。畫面是一間金屬地板的暗室。</li>
+            <li><b>3:00</b>　畫面是地圖，字幕提到一個郡名（我讀成「魯蔓科斯郡」，可能是 Lummox County 的音譯）。</li>
+            <li><b>3:15</b>　字幕：就可以獲得這個耐力加成。</li>
+            <li><b>3:30</b>　畫面出現「吃／拒絕」選項，字幕：這裡一定要選擇吃。</li>
+            <li><b>3:44</b>　字幕：他是每隔一大段時間再刷一次啊。</li>
+          </ul>
+          <ul class="bul">
+            <li><span class="tag">留言說法・未驗證</span>有人說外星人事件雖然綁定單人觸發，但最後解的時候可以兩個角色一起去，兩人都能加到屬性。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人問「第三章還可以做這個嗎」，另一位回「可以」；也有人問第幾章開始能遇到，沒有人回答。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說外星人最後以摩斯電碼講「THANK YOU」。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人問「不小心舉槍嚇走凱爾，還能不能拿草莓」，沒有回覆。</li>
+          </ul>
+        </div></details>
+
+      <details class="chap"><summary><span class="no cnum">4</span><span class="ctitle">隕石 $50、蛋白棒回血<small>Threads @archerglimmer，文字</small></span></summary>
+        <div style="padding:0 18px 16px">
+          <ul class="bul">
+            <li>貼文：有一顆隕石，賣 $50，走過去就撿得到（位置貼文沒說）。</li>
+            <li>作者回覆：遊戲裡可以吃 25 次；一根蛋白棒 $2，餓了或受傷就按 R 吃。</li>
+            <li>作者回覆：$50 差不多是隨機搶劫 3 到 5 次的收穫。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說隕石可以留到後面，解鎖網路拍賣後掛上去賣更多。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說第二章躲警察時，靠近擱淺的鯨魚會氣爆，噴出一顆隕石和古柯鹼。</li>
+          </ul>
+        </div></details>
+    </section>
+
+    <section class="tab" id="weapons">
+      <h2>金色武器與稀有武器</h2>
+      <p>以 5 支 YouTube 影片為主（Somi 醬、梅卡梅、見塵、阿翊），並把先前圖文貼文與影片中重複的武器合併。每張卡都標出是哪支影片的哪一秒，拿到後按「已取得」。名稱以影片字幕為準，各支影片的譯名不同，我用括號補充。</p>
+      <div id="weaponList"></div>
+    </section>
+
+    <section class="tab" id="hidden">
+      <h2>隱藏地點</h2>
+      <p>只有地圖、沒有講答案的貼文。內容以圖片與留言為主，留言說法我都標為未驗證。</p>
+
+      <article class="weapon">
+        <div class="w-head"><h3>南凱利郡海邊的標記點<small>貼文標題：去了之後你會回來感謝我（@dosloveyou）</small></h3></div>
+        <figure class="map"><button type="button" class="zoom" data-full="assets/maps/gift-spot.jpg" aria-label="放大看地圖截圖"><div class="crop" style="aspect-ratio:1080/810"><img src="assets/maps/gift-spot.jpg" alt="地圖截圖：目的地標記在南凱利郡西側的海灘" loading="lazy" style="width:100%;left:0;top:0"></div></button><figcaption>貼文只有這張地圖。目的地標記在南凱利郡西側的海灘，附近有卡普里與陸龜湖，畫面下方字幕為「在區域尋找包裹」。</figcaption></figure>
+        <ul class="bul">
+          <li>貼文沒有文字說明，也沒有講那裡有什麼。</li>
+          <li><span class="tag">留言說法・未驗證</span>留言者 xuanlllzz 表示：有一棟屋子在開裸體派對，旁邊那棟大門口旁有個小黃箱，裡面有張金卡。這則留言的讚數最高。</li>
+          <li><span class="tag">留言說法・未驗證</span>另一位留言者只找到一張卡片；也有人說「後面可以回去」。其餘留言多半只是收藏。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="tab" id="cards">
+      <h2>收藏卡片</h2>
+      <p>遊戲裡可以收集的卡片。目前只整理到貼文給的兩張。</p>
+
+      <article class="weapon">
+        <div class="w-head"><h3>家裡附近的兩張收藏卡片<small>貼文標題：家裡附近有兩張卡片可以取得！（@fraieinsam）</small></h3></div>
+        <p class="w-meta" style="display:block">貼文只有 4 張圖，沒有文字說明：兩張地圖截圖（標有房屋圖示與載具圖示的海岸一帶），以及兩張取得後的卡片。哪張卡在哪裡，貼文沒有講。</p>
+        <div class="gal">
+          <figure><button type="button" class="zoom" data-full="assets/cards/c1.jpg" aria-label="放大看地圖"><img class="sq" src="assets/cards/c1.jpg" alt="地圖截圖，標有房屋圖示與載具圖示" loading="lazy"></button><figcaption>地圖：房屋圖示在海岸邊</figcaption></figure>
+          <figure><button type="button" class="zoom" data-full="assets/cards/c3.jpg" aria-label="放大看地圖特寫"><img class="sq" src="assets/cards/c3.jpg" alt="地圖特寫，標有房屋圖示" loading="lazy"></button><figcaption>地圖特寫</figcaption></figure>
+          <figure><button type="button" class="zoom" data-full="assets/cards/c2.jpg" aria-label="放大看卡片"><img class="sq" src="assets/cards/c2.jpg" alt="卡片：The Educated Woman" loading="lazy"></button><figcaption>卡片：The Educated Woman（Strength 62、Patriotism 04、Bigotry 00、Speed 37）</figcaption></figure>
+          <figure><button type="button" class="zoom" data-full="assets/cards/c4.jpg" aria-label="放大看卡片"><img class="sq" src="assets/cards/c4.jpg" alt="卡片：Santiago Lopez，LOBDUNKS" loading="lazy"></button><figcaption>卡片：Santiago Lopez（LOBDUNKS・Los Santos Panic）</figcaption></figure>
+        </div>
+        <ul class="bul">
+          <li><span class="tag">留言說法・未驗證</span>留言者 roc_840426 說「肯頓這邊一張」，另一張位置沒人補充。</li>
+          <li>其餘留言幾乎都是「存」。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="tab" id="cars">
+      <h2>車輛與賺錢</h2>
+      <p>整理自 YG tech 的影片（10 分 49 秒），主題是前中期就能拿到的超跑與高級車，附刷錢方法與幾把傳說武器。約每 12 到 15 秒取樣一次（7:05 之後的幾段加密到每 5 秒）；0:00 到 2:20 是開場與手把業配（中間有一張作者自己也不確定的作弊碼表），沒有攻略，不整理。</p>
+      <p class="caveat">影片描述欄的章節時間和我取樣到的實際畫面有幾處對不上（例如 5:57「凡妮莎的粉紅跑車」章節，我在 6:50 才看到她的簡訊與粉紅跑車）；7:05 的肌肉車我實際看到標題卡在 7:08，所以每項的「▶ 影片」時間是我實際看到畫面的秒數，不是描述欄章節。刷錢數字與「11/21 實測還能用」有關，遊戲更新後可能改變。字幕只有短句，兩次取樣之間的話我沒讀到，沒讀到的步驟寫「影片沒取樣到」，沒有座標。</p>
+      <details class="chap"><summary>名詞說明（本章與「社群賺錢與載具」共用）</summary>
+        <div style="padding:0 18px 16px"><ul class="bul">
+          <li><b>登記：</b>車輛資訊畫面有「登記費用」。開局十件事的字幕說「登記好以後才算你自己的車」，街上順來的車不算。</li>
+          <li><b>出售價值：</b>車輛資訊畫面的「出售價值」，賣給銷贓商或噴漆店的價格。例子：皇家紅寶石艾默瑞思出售價值 $30,000、登記費用 $29,900（Instagram @ezgoson）；藍色跑車出售價值 $21,250、登記費用 $70,000（Facebook Zico利扣）。</li>
+          <li><b>權限、保全、追蹤器：</b>車輛資訊畫面的三欄，常見畫面是「權限 已解鎖」「保全 已解除」「追蹤器 無」。多支影片特別強調「沒有追蹤器」；我推測是追蹤器會讓偷來的車被定位，但影片沒有完整解釋，請以遊戲內說明為準。</li>
+          <li><b>車庫：</b>社群貼文（Threads @su_o925）說在手機 App「罪惡市房地產」購買，畫面例子是 $30,000 的車庫；沒錢登記時可先買便宜車庫，車放進去不會消失，等有錢再登記。有人問車庫在哪買，貼文沒回答。</li>
+        </ul></div></details>
+      <div id="carList"></div>
+    </section>
+
+    <section class="tab" id="money">
+      <h2>社群賺錢與載具</h2>
+      <p>社群分享的賺錢方法、免費或偷取的車，共 3 則（原本 7 則，已把同主題的合併）。YG tech 長影片的整理在上一章「車輛與賺錢」，這章是其他來源的補充，兩邊的做法與數字有出入時並列，以遊戲內為準。更新後有些方法可能失效，留言說法標「未驗證」。</p>
+
+      <details class="chap" open><summary><span class="no cnum">1</span><span class="ctitle">倉庫刷錢：原版 Bug 與優化版<small>Threads @link.5730（文字）＋ Facebook YG tech 短片（描述欄）</small></span></summary>
+        <div style="padding:0 18px 16px">
+          <p>同一個「哈姆雷特倉庫反覆刷新、賣給銷贓商」的做法有兩個社群版本。「車輛與賺錢」章裡有 YG tech 長影片的逐秒整理（有 ▶ 影片連結與截圖），想對照原片請看那一組。</p>
+          <h3 style="margin:18px 0 6px;font-size:1.05rem">版本 A：原版 Bug（Threads @link.5730，簡體原文已轉繁體）</h3>
+          <p>作者標題寫「給進入第三章後不想努力的你」：</p>
+          <ol class="steps">
+            <li><b>登記一輛能裝 10 包袋子的麵包車，開去 P2 的小熊麵包車倉庫</b></li>
+            <li><b>拿完一輪後，站在捲簾門底下，把倉庫外的車開遠一點</b></li>
+            <li><b>迅速切換角色到 Lucia，再切換回 Jason</b><span>會發現麵包車又刷出一輛。</span></li>
+            <li><b>反覆拿、反覆裝滿自己的麵包車，賣給泰龍</b><span>作者說手速快，一下子就有 11 萬。</span></li>
+          </ol>
+          <h3 style="margin:18px 0 6px;font-size:1.05rem">版本 B：優化版 4 步驟（Facebook YG tech 短片，59 秒，描述欄）</h3>
+          <p>作者說：看有些人說那個刷錢大法被修了，剛剛測試後還是可以用，順便附上優化版本。影片標題「GTA6 無限刷錢 優化版」：</p>
+          <ol class="steps">
+            <li><b>前往哈姆雷特右上角</b></li>
+            <li><b>搜兩台貨車的後車廂和保險櫃</b></li>
+            <li><b>開車到倉庫北邊的十字路口，開回來，古柯鹼就刷新</b></li>
+            <li><b>用貨車來回載 10 袋，去找銷贓商賣掉</b></li>
+          </ol>
+          <p class="sub2">短片的畫面字幕我只讀到部分（STEP 1、STEP 4 的標題卡，以及「每次過來的時候就搜外面跟裡面」這類字樣），其餘以描述欄為準。</p>
+          <h3 style="margin:18px 0 6px;font-size:1.05rem">兩個版本的差異與矛盾</h3>
+          <ul class="bul">
+            <li>A 靠「切換角色」刷出新的麵包車；B 靠「開到北邊十字路口再開回來」刷新古柯鹼，並要先搜兩台貨車。兩者刷新的東西不同。</li>
+            <li>「車輛與賺錢」章的長影片提醒「千萬不要開小熊車」（開到要重新讀檔，我沒讀到原因），看起來與 A 登記小熊麵包車的做法相衝突。我沒有驗證，請自行判斷。</li>
+            <li>作者回覆：他是 Xbox 版，還沒收到 R 星的第一次更新，更新後能不能用他不知道。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說更新後一樣有用（「特別去試了」）；另一位說更新後被改了，車子會不見，但東西還能重複拿。兩種說法相反，請自行測試。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說實測一袋只有 $7,200、十袋才八萬多、最多 $40,000，與標題的 11 萬不一致，可能跟價格浮動或保險箱是否已開有關，沒人確認。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說第三章隨便搶路上的車去噴漆店賣，就有 $10,000 到 $15,000，不需要刷。</li>
+          </ul>
+        </div></details>
+
+      <details class="chap"><summary><span class="no cnum">2</span><span class="ctitle">免費拿車的 4 種做法<small>偷超跑、穿牆 Bug、萬聖節痛車、免費痛車</small></span></summary>
+        <div style="padding:0 18px 16px">
+          <p>四種「不用買就能拿到車」的做法，來源與風險各不相同，先看比較再展開各自的步驟。名詞（登記、追蹤器、出售價值）見「車輛與賺錢」章開頭的名詞說明。</p>
+          <ul class="bul">
+            <li><b>偷超跑（Instagram @ezgoson）：</b>白色豪宅裡的皇家紅寶石艾默瑞思；沒警報、沒追蹤器；出售價值 $30,000、登記費用 $29,900。</li>
+            <li><b>穿牆 Bug（Facebook Zico利扣）：</b>需要卡進牆的 Bug 點，作者試了快 30 分鐘；藍色跑車（名稱沒讀清）；登記費用 $70,000、出售價值 $21,250。</li>
+            <li><b>萬聖節痛車（Threads @daxiongx）：</b>第二章高級住宅區某房子門口，不用偷、直接開走；回去會重生可重複領；賣給阿摩 $1,700。</li>
+            <li><b>免費痛車與保險箱（Threads @chincheek_）：</b>進房子左轉車庫有免費痛車，右轉有保險箱（$1,024 加一支手錶）；5 張縮圖。</li>
+          </ul>
+          <h3 style="margin:18px 0 6px;font-size:1.05rem">① 偷超跑，賣掉賺 $3 萬（Instagram @ezgoson 的 Reel，55 秒）</h3>
+          <p>標題：GTA6 不用開戰就能偷超跑，賣掉賺 3 萬。約每 7 秒抓一次畫面字幕：</p>
+          <ol class="steps">
+            <li><b>先打開地圖</b><span>（0:04）</span></li>
+            <li><b>找到這個位置</b><span>地圖上顯示導航點「目的地」與一段不到 1 英里的距離。（0:09）</span></li>
+            <li><b>找到這棟白色豪宅</b><span>（0:16）</span></li>
+            <li><b>已解鎖・沒警報・沒追蹤器</b><span>車輛資訊：皇家紅寶石艾默瑞思；權限已解鎖、保全已解除、追蹤器無；出售價值 $30,000、登記費用 $29,900。（0:23）</span></li>
+            <li><b>先到前面打開大門</b><span>（0:30）</span></li>
+            <li><b>選最近或喜歡的噴漆店</b><span>地圖上選噴漆店賣車。（0:38）</span></li>
+            <li><b>下次路過豪宅，先掃一下</b><span>（0:46）</span></li>
+          </ol>
+          <div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(120px,160px))">
+            <figure><button type="button" class="zoom" data-full="assets/frames/ez-map.jpg" aria-label="放大：地圖"><img src="assets/frames/ez-map.jpg" alt="地圖與目的地" loading="lazy"></button><figcaption>地圖（0:09）</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ez-mansion.jpg" aria-label="放大：白色豪宅"><img src="assets/frames/ez-mansion.jpg" alt="白色豪宅" loading="lazy"></button><figcaption>白色豪宅（0:16）</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ez-status.jpg" aria-label="放大：車輛資訊"><img src="assets/frames/ez-status.jpg" alt="車輛資訊：沒有追蹤器" loading="lazy"></button><figcaption>車輛資訊（0:23）</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ez-gate.jpg" aria-label="放大：大門"><img src="assets/frames/ez-gate.jpg" alt="豪宅大門前" loading="lazy"></button><figcaption>大門（0:30）</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ez-paint.jpg" aria-label="放大：噴漆店"><img src="assets/frames/ez-paint.jpg" alt="地圖上選噴漆店" loading="lazy"></button><figcaption>噴漆店（0:38）</figcaption></figure>
+          </div>
+          <ul class="bul">
+            <li>影片沒有座標，也沒有說在哪一個地區。畫面車款與「車輛與賺錢」章的紅寶石艾默瑞思同名，位置是否同一處，影片沒說（那一組已補上這裡的價格）。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說「偷了虧兩萬九，登記了發現沒後車廂」，與作者的「賣掉賺 3 萬」說法不同（登記費用 $29,900 與出售價值 $30,000 差不多）。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說賣掉就沒有了，也有人問賣掉還會不會刷新，沒人回答。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說路過掃描時，基本上都有追蹤器。</li>
+          </ul>
+        
+          <h3 style="margin:18px 0 6px;font-size:1.05rem">② 穿牆 Bug（Facebook Zico利扣，59 秒）</h3>
+          <p>標題：GTA6 超扯穿牆 BUG！竟然能免費獲得最有價值超跑。我第二次重讀，約每 2 到 3 秒取樣一次，全片 59 秒的字幕大致讀完。開場字幕：「性能爆表的布加迪」（0:01）、「一定要看完」（0:03）、「先追蹤起來，典藏影片，怕你之後找不到」（0:06 到 0:08）。流程：</p>
+          <ol class="steps">
+            <li><b>首先來到地圖上這個位置</b><span>地圖上有一塊白線框起來的島區（位置在水邊），沒有座標。（0:10）</span></li>
+            <li><b>目標是一間門口用木頭做的房子</b><span>字幕：門口用木頭做的。（0:12）</span></li>
+            <li><b>靠近會有警衛；要打掉他</b><span>字幕：當你靠近就會有警衛…你；看你要把他打掉。畫面是角色把一個人打倒在地。字幕第一句的中間幾個字我沒讀清楚。（0:14 到 0:16）</span></li>
+            <li><b>接著翻牆過去</b><span>（0:19）</span></li>
+            <li><b>旁邊有台大 G 可以開</b><span>黑色 G 級越野車停在院子裡。（0:21）</span></li>
+            <li><b>把車子移到兩個車庫</b><span>字幕：把車子移到兩間車庫。（0:23）</span></li>
+            <li><b>製造一個可以讓角色跳進去的…</b><span>字幕只讀到這句，後面的話我沒讀到；畫面是角色站在大 G 前。（0:26）</span></li>
+            <li><b>卡牆壁 Bug 點</b><span>（0:29）</span></li>
+            <li><b>我試了快 30 分鐘，才找到這個神祕 G 點</b><span>作者說這個位置很難找。（0:31 到 0:33）</span></li>
+            <li><b>跳進去後按下蹲下</b><span>（0:34）</span></li>
+            <li><b>接著打開手機</b><span>（0:36）</span></li>
+            <li><b>神奇的事情發生了</b><span>畫面是手機主畫面。（0:38）</span></li>
+            <li><b>（藍色跑車出現）</b><span>0:40 字幕模糊讀不出，畫面是一台藍色車，在暗處。</span></li>
+            <li><b>當然這台車要拿去賣掉，或是花 7 萬登記成自己的</b><span>畫面：登記費用 $70,000、出售價值 $21,250，權限已解鎖、保全已解除、追蹤器無。（0:42 到 0:43）</span></li>
+            <li><b>牆壁旁有鐵門按鈕，打開就能輕鬆出去</b><span>（0:45 到 0:47）</span></li>
+            <li><b>性能：這車性能真的很誇張，都是直接彈射起步</b><span>（0:49 到 0:51）</span></li>
+            <li><b>結尾：歡迎追蹤 IG、訂閱頻道；「如果覺得找地點…」</b><span>（0:54 到 0:57）後半句被截掉，沒讀到。</span></li>
+          </ol>
+          <div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(120px,160px))">
+            <figure><button type="button" class="zoom" data-full="assets/frames/zico-map.jpg" aria-label="放大：地圖"><img src="assets/frames/zico-map.jpg" alt="地圖上的目標島區" loading="lazy"></button><figcaption>地圖（0:10）</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/zico-gpoint.jpg" aria-label="放大：G 點"><img src="assets/frames/zico-gpoint.jpg" alt="神祕 G 點" loading="lazy"></button><figcaption>神祕 G 點（0:33）</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/zico-car.jpg" aria-label="放大：藍色跑車"><img src="assets/frames/zico-car.jpg" alt="暗處的藍色跑車" loading="lazy"></button><figcaption>藍色跑車（0:40）</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/zico-status.jpg" aria-label="放大：車輛資訊"><img src="assets/frames/zico-status.jpg" alt="登記費用與出售價值" loading="lazy"></button><figcaption>車輛資訊（0:42）</figcaption></figure>
+          </div>
+          <ul class="bul">
+            <li>字幕只有短句，我沒聽到語音，所以「在哪個動作穿牆」「按什麼鍵」都沒講明；影片的穿牆點是在哪個姿勢與角度，字幕只說「跳進去後按下蹲下」。上面流程的前後順序是我依字幕時間排的。</li>
+            <li>藍色車與車庫的關係（車在兩間車庫的哪一間）影片沒有講清楚，我不編造。</li>
+            <li>字幕與標題的「最有價值」不一致：畫面的出售價值只有 $21,250，登記要 $70,000。車款名稱我看不清楚，沒寫進來。</li>
+            <li>沒有座標，只有 0:10 的地圖畫面。</li>
+          </ul>
+        
+          <h3 style="margin:18px 0 6px;font-size:1.05rem">③ 萬聖節痛車（Threads @daxiongx）</h3>
+          <ul class="bul">
+            <li>作者在第二章夜晚，到地圖左下的高級住宅區閒逛，看到一間萬聖節裝飾的房子，門口停著萬聖節痛車，不用偷就能直接開走。</li>
+            <li>他把車開回車庫，回去拍照時發現這台車重生了。一台自己留著開，一台賣給阿摩，賣了 $1,700。</li>
+            <li>貼文沒有附座標，只有「地圖左下的高級住宅區」這句話。</li>
+            <li><span class="tag">留言說法・未驗證</span>相關串文有人說這台南瓜車居然要家園 21 級才能使用，貼文沒有確認。</li>
+          </ul>
+        
+          <h3 style="margin:18px 0 6px;font-size:1.05rem">④ 免費痛車、保險箱 $1,024 加手錶（Threads @chincheek_，5 張圖）</h3>
+          <p>貼文原文：房子進去，右轉有保險箱（$1,024 加手錶一支），左轉有免費痛車。可以搶劫屋主，但他身上什麼都沒有。進去拿完東西就可以走了，他很忙，不會發現。</p>
+          <div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(150px,210px))">
+            <figure><button type="button" class="zoom" data-full="assets/posts/kia1.jpg" aria-label="放大：房子外觀"><img src="assets/posts/kia1.jpg" alt="房子外觀，門口停著一台皮卡" loading="lazy"></button><figcaption>1. 房子外觀：門口停著皮卡，角色站在街上</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/posts/kia2.jpg" aria-label="放大：屋內"><img src="assets/posts/kia2.jpg" alt="屋內，戴 VR 頭盔的屋主" loading="lazy"></button><figcaption>2. 屋內：屋主戴著 VR 頭盔，字幕「噢哇，你可真愛玩啊？」</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/posts/kia3.jpg" aria-label="放大：保險箱"><img src="assets/posts/kia3.jpg" alt="蹲著撬保險箱，提示按 R" loading="lazy"></button><figcaption>3. 保險箱：角色蹲著撬，提示「R」</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/posts/kia4.jpg" aria-label="放大：痛車"><img src="assets/posts/kia4.jpg" alt="車庫裡的痛車，提示按三角形打開" loading="lazy"></button><figcaption>4. 車庫裡的痛車（動漫貼紙塗裝），提示「△ 打開」</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/posts/kia5.jpg" aria-label="放大：地圖"><img src="assets/posts/kia5.jpg" alt="地圖畫面翻拍，標記在水邊" loading="lazy"></button><figcaption>5. 地圖（螢幕翻拍）：標記在水邊建築區，沒有座標</figcaption></figure>
+          </div>
+          <ul class="bul">
+            <li>圖片是貼文的縮圖版本（寬約 210 到 320 像素），我抓不到原圖，放大會模糊。</li>
+            <li>貼文沒有寫座標，也沒有說在哪一區。第 5 張只是地圖翻拍。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人回「Key lento」（蘭托礁島，與「第一章要做的事」的迷你超市同一區），沒有其他佐證。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人問「所以要第二章過後嗎」，另一位回「要通關後才能使用」，兩人說法不同，貼文沒有確認。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說保險箱的 R 鍵轉不成功（「沒有一次轉成功」），沒有人回覆做法。</li>
+            <li><span class="tag">留言說法・未驗證</span>另有人問「集 10 支名表可以解鎖快轉、20 支可以暫停是真的嗎」，沒有回覆。</li>
+          </ul>
+        
+        </div></details>
+
+      <details class="chap"><summary><span class="no cnum">3</span><span class="ctitle">銀行金庫第一次就開成功（英文）<small>Threads @leonidarecapgta6，文字；作者標示 AI 配音</small></span></summary>
+        <div style="padding:0 18px 16px">
+          <p>原文為英文，標題說金庫一袋 $1,000,000。作者標明內容轉述自 IGN 與 Clutchbase 的早期攻略，影片素材來自 Ludwig（Twitch）與 GuidingLight（YouTube），我沒有核對那兩個來源。</p>
+          <ol class="steps">
+            <li><b>鑽孔：</b><span>兩個扳機都輕輕按住，量表到紅色前就放鬆。</span></li>
+            <li><b>鏡頭：</b><span>不要碰牆；向右轉到底，沿著電纜找到金色掛鉤。</span></li>
+            <li><b>掛上掛鉤：</b><span>然後按住兩個扳機並連打。</span></li>
+            <li><b>搜刮：</b><span>不到一分鐘，跳過鎖箱，直接拿現金推車。</span></li>
+          </ol>
+          <ul class="bul">
+            <li>作者建議：在任務「Safe Word」的保險箱練習。</li>
+            <li><span class="tag">留言說法・未驗證</span>有人說小銀行容易得多，保險箱密碼就在辦公室電腦上，從來不需要炸藥。</li>
+            <li>貼文沒有說明是哪一間銀行，也沒有座標。</li>
+          </ul>
+        </div></details>
+    </section>
+
+    <footer class="src">
+      <ul>
+        <li>設定篇來源：Threads 貼文（@alcatelg，GTA 6 版），內容為截圖與留言。</li>
+        <li>金色武器篇來源：Threads 貼文（@sdddrd），圖文原作者標示為 xhsRushGames，共 8 張圖（封面加 7 頁）。地圖截圖取自這些圖，存放在 assets/maps 資料夾。</li>
+        <li>開局十件事來源：Threads 貼文（@game_tom777）的影片，僅讀取畫面字幕。</li>
+        <li>「隨機事件與彩蛋」第 1 則來源：Instagram @game_tom777 的 Reel「開局必看攻略」（只讀畫面字幕）。另一支 Instagram Reel（DgHz6Wfouva）因為標示年齡限制、需登入才能看，我沒有讀，沒有整理。</li>
+        <li>社群三章（社群小技巧與規則、隨機事件與彩蛋、社群賺錢與載具）來源：Threads @andrewjao.0222、@john_liu818、@archerglimmer、@daxiongx、@link.5730、@leonidarecapgta6、@chen.lun.71（轉貼 @game_tom777 影片）；Instagram @ezgoson 的 Reel；Facebook YG tech 遊戲頻道、Zico利扣的 Reel。圖為影片畫面，存放在 assets/frames，版權屬原作者。GTABase 互動地圖畫面取自 gtabase.com（assets/tips/gtabase-map.jpg），版權屬 GTABase。</li>
+        <li>隱藏地點、收藏卡片與金色武器後 7 把的來源：Threads 貼文 @dosloveyou、@sdddrd、@fraieinsam、@yichen810303，圖片存放在 assets/maps、assets/sniper、assets/cards；留言說法皆未驗證。@yichen810303 的兩篇內容在 YouTube 影片，我依影片的英文自動字幕整理成時間軸，可能有誤。</li>
+        <li>金色武器、第一章要做的事、車輛與賺錢的來源：YouTube 影片（Somi 醬 lvZveGgR0tQ、玫玫物語 -xLXo_dnax4、梅卡梅 tXsAMlrkDTo、見塵 ACiUCjoH91o、YG tech 472k7Y0ttoA）與前述貼文；摔角手與下車技巧：YouTube 影片 3ko7ycLUULk；社群小技巧：Threads @su_o925（DgFWE0nE-pr）、@chincheek_（DgFoEGIE6_e），圖片存放在 assets/posts。截圖為影片畫面，存放在 assets/frames，版權屬原創作者，僅供個人參考。名稱依影片字幕，各影片譯名不同。</li>
+        <li>操作技巧篇來源：你提供的圖片，作者不明，存放在 assets/tips。</li>
+        <li>任務清單來源：Threads 貼文（@cychenac），原圖標示畫面取自 BeardBear 的 YouTube 影片；譯名非官方。</li>
+        <li>武器篇原圖為簡體中文，名稱與地名由我轉成繁體，可能與遊戲內繁中名稱不同，請以遊戲內顯示為準。</li>
+        <li>貼文附的原影片為 YouTube「MoYo TIPS ON」的 PS5 設定教學，本頁未讀取影片內容。</li>
+        <li>數值皆為社群推薦值，並非官方建議。截圖中有幾個項目的標籤被裁切，已依可見文字照錄。</li>
+      </ul>
+    </footer>
+  </main>
+</div>
+
+<dialog id="lb" aria-label="圖片放大檢視"><img alt=""><button type="button" id="lbClose">關閉</button></dialog>
+
+<script>
+// kind: n=數字, t=開關, c=選項（c 的 note 放 x/y）
+const DATA=[
+ {id:"controller",title:"控制器",desc:"靈敏度、反轉與 DualSense 專屬功能。",groups:[
+  {t:"瞄準與環視靈敏度",r:[["水平環視靈敏度","n",14],["垂直環視靈敏度","n",14],["水平瞄準靈敏度","n",14],["垂直瞄準靈敏度","n",14],["視角加速","n",14],["瞄準加速","n",0],["瞄準反應曲線","c","精準","3 / 4"]]},
+  {t:"反轉控制",r:[["環視","c","預設","1 / 4"],["移動","c","預設","1 / 4"],["3D 地圖旋轉","c","預設","1 / 4"],["飛行載具移動","t",1]]},
+  {t:"DualSense 無線控制器功能",r:[["震動與觸覺回饋強度","n",10],["盲區（左操作桿）","n",1],["盲區（右操作桿）","n",1],["自適應扳機阻力","t",1],["自適應扳機震動","t",1],["自動限速","t",1],["觸碰板按鈕","c","地圖","1 / 2"],["光條效果","t",1]]}
+ ]},
+ {id:"game",title:"遊戲",desc:"戰鬥、移動與協助工具。",groups:[
+  {t:"戰鬥",r:[["瞄準目標","c","鎖定","1 / 3"],["輔助瞄準強度","n",4],["鎖定時間","n",4],["鎖定目標切換","t",1],["射擊輔助","t",1],["駕車射擊輔助瞄準","t",1],["快速拔出","t",1],["掩護選擇","c","鏡頭與移動","1 / 2"],["收起武器（在載具內）","c","自動","1 / 2"]]},
+  {t:"移動",r:[["移動速度","c","慢跑","3 / 4"],["戰鬥移動速度","c","快步","2 / 3"],["站立與衝刺","t",1]]},
+  {t:"協助工具",r:[["點按輔助","c","4x","4 / 5"],["按住延遲","c","關閉","1 / 11"],["按住輔助","c","2x","2 / 4"],["進入專注狀態","c","L3 + R3","1 / 2"],["方向按鈕操作","c","按住","1 / 2"],["瞄準","c","按住","1 / 2"],["互動","c","按","2 / 2"],["配備","c","按住","1 / 2"],["釣魚","c","旋轉","1 / 3"],["氮氣加速","c","按住","1 / 2"],["簡化小遊戲","t",1],["自動駕駛","c","無限制","2 / 2"],["自動裝備安全帽","t",0],["低難度戰鬥","t",0],["減少載具受損","t",1]]}
+ ]},
+ {id:"display",title:"顯示",desc:"視覺特效強度。亮度與安全區請依自己的螢幕校正。",groups:[
+  {t:"視覺效果",r:[["玩家狀態效果強度","n",5],["擊中特效強度","n",5],["警示效果強度","n",5],["動態模糊強度","n",1],["肢解","t",1],["血腥效果強度","c","高","3 / 3"],["閃光彈","c","暗","2 / 2"],["專注狀態蹤跡色盲模式","t",0],["亮度調暗","t",0]]},
+  {t:"高對比著色",r:[["高對比著色","t",0]]}
+ ]},
+ {id:"camera",title:"鏡頭",desc:"想要畫面不暈不晃，重點在這一頁。",groups:[
+  {t:"徒步",r:[["高度（徒步）","c","高","3 / 3"],["水平跟隨速度","n",0],["垂直跟隨速度","n",0]]},
+  {t:"陸上與水上載具",r:[["高度（所有載具）","c","高","3 / 3"],["水平跟隨速度（駕駛）","n",0],["垂直跟隨速度（駕駛）","n",0],["跟隨延遲（駕駛）","n",0],["水平跟隨速度（乘客）","n",0],["垂直跟隨速度（乘客）","n",0],["跟隨延遲（乘客）","n",10]]},
+  {t:"舒適度",r:[["鏡頭偏好","t",1],["武器晃動","t",0],["鏡頭晃動","t",0],["鏡頭晃動（滑桿）","n",0],["手機顯示","c","預設","1 / 2"]]},
+  {t:"飛行載具",r:[["水平跟隨速度","n",0],["垂直跟隨速度","n",0],["跟隨滾轉","t",1],["跟隨滾轉速度","n",5],["滾轉盲區範圍","n",10]]},
+  {t:"水下",r:[["水平跟隨速度","n",0]]},
+  {t:"電影效果",r:[["電影效果擊殺鏡頭頻率","n",3],["電影特效載具碰撞頻率","n",3],["閒置鏡頭","t",1]]}
+ ]}
+];
+
+const KEY="gta6-guide-applied-v1";
+let applied={};
+try{applied=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){applied={}}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(applied))}catch(e){}};
+
+const tabsEl=document.getElementById("tabs"), navEl=document.getElementById("nav");
+const allIds=[];
+
+// 設定篇：單一章節，四個分類各自收合（與主線任務相同的呈現）
+const setSec=document.createElement("section");setSec.className="tab";setSec.id="settings";
+setSec.innerHTML=`<h2>開場設定（PS5 手把）</h2><p>整理自社群貼文的設定截圖，共 4 個分類，預設收合。點每一列可標記「已套用」。</p>`;
+DATA.forEach(tab=>{
+  const sec=document.createElement("details");sec.className="chap";sec.id=tab.id;
+  const total=tab.groups.reduce((n,g)=>n+g.r.length,0);
+  sec.innerHTML=`<summary><span class="no cnum">${total}</span><span class="ctitle">${tab.title}<small>${tab.desc}</small></span></summary>`;
+  tab.groups.forEach((g,gi)=>{
+    const box=document.createElement("div");box.className="group";
+    box.innerHTML=`<h3>${g.t}</h3>`;
+    g.r.forEach((r,ri)=>{
+      const id=`${tab.id}-${gi}-${ri}`;allIds.push({id,tab:"settings"});
+      const [label,kind,val,frac]=r;
+      let chip;
+      if(kind==="n")chip=`<span class="chip num">${val}</span>`;
+      else if(kind==="t")chip=`<span class="chip ${val?"on":"off"}">${val?"開啟":"關閉"}</span>`;
+      else chip=`<span class="chip">${val}${frac?`<small>${frac}</small>`:""}</span>`;
+      const b=document.createElement("button");
+      b.type="button";b.className="row";b.dataset.id=id;
+      b.setAttribute("aria-pressed",applied[id]?"true":"false");
+      b.innerHTML=`<span class="tick" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="lab name">${label}</span><span class="dots" aria-hidden="true"></span>${chip}`;
+      b.addEventListener("click",()=>{
+        const on=b.getAttribute("aria-pressed")!=="true";
+        b.setAttribute("aria-pressed",on?"true":"false");
+        if(on)applied[id]=1;else delete applied[id];
+        save();update();
+      });
+      box.appendChild(b);
+    });
+    sec.appendChild(box);
+  });
+  setSec.appendChild(sec);
+});
+tabsEl.appendChild(setSec);
+{
+  const g=document.createElement("div");g.className="ngrp";g.textContent="開局前";navEl.appendChild(g);
+  const a=document.createElement("a");a.href="#settings";a.dataset.tab="settings";
+  a.innerHTML=`<span>設定</span><span class="cnt"></span>`;
+  navEl.appendChild(a);
+}
+
+// 金色武器篇：依序步驟，故用編號
+const YA="HbwzIGnaU7c", YB="bk07Th-bXSk";
+const vl=(id,label)=>`<a href="https://youtu.be/${id}" target="_blank" rel="noopener noreferrer">${label}</a>`;
+const tm=s=>Math.floor(s/60)+":"+String(s%60).padStart(2,"0");
+const YS="lvZveGgR0tQ", YM="tXsAMlrkDTo", YJ="ACiUCjoH91o", YC="-xLXo_dnax4";
+const F=n=>`assets/frames/${n}.jpg`;
+// 每把武器：id、名稱、副標、資訊列 meta、編號步驟 steps（[標題, 說明, 影片id, 秒數]）、重點 note、圖 shots（[檔名, 說明]）、extra
+const WEAPONS=[
+ {id:"hoker",name:"霍克與立德 .38 手槍",sub:"唐尼的專屬版本（Somi 影片 0:48）",
+  meta:[["地點","第一章：唐尼拖車旁、停在碎石地上的紅色舊轎車，後車廂"],["取得時機","處理唐尼的車之前（之後就拿不到）"],["影片",vl(YS,"Somi 0:48")+"、"+vl(YC,"玫玫物語 2:38")]],
+  steps:[["進入唐尼的拖車屋","Somi 影片從唐尼的拖車屋開始，字幕：「唐尼的霍克與立德 .38」。",YS,48],["順手拿唐尼的金框墨鏡","玫玫物語：靠近架子上的金框墨鏡會跳出拾取提示，這副墨鏡到第二章還會留在衣櫃裡。",YC,147],["打開紅色舊轎車的後車廂取槍","字幕：「裡面就放著一把獨特武器」，畫面提示「唐尼的霍克與立德 .38 左輪手槍」；撿起來時同時拿到槍與左輪彈藥。",YC,158],["注意取得時機","玫玫物語字幕：「後車廂這把左輪就拿不到了」（處理唐尼的車之後）。Somi 影片 1:12 也提醒「這裡就要特別注意」。",YC,172]],
+  note:"玫玫物語影片已確認：「唐尼後車廂的獨特左輪」就是這把霍克與立德 .38。第一章要在處理唐尼的車之前拿，之後就拿不到。",
+  shots:[["somi-honker-1","唐尼的拖車屋內"],["somi-honker-2","取得時機的提醒"]]},
+ {id:"nipa",name:"刺客尼帕 .38 手槍",sub:"傳說武器・自帶消音器（原「消音手槍」與「海上金色消音手槍」合併為此）",
+  meta:[["地點","右側長條島嶼南端的擱淺木船（帕米特礁群島一帶）"],["交通","乘船或直升機；船要開過去"],["難度","沒有敵人；一星通緝，開遠會自動消失"],["影片",vl(YS,"Somi 1:37")+"、"+vl(YB,"阿翊 1:30")+"、"+vl(YJ,"見塵 3:25")]],
+  steps:[["在地圖上設標記","影片：「我們要去的是…」，把目的地設在右側長條島嶼南端。",YS,105],["開船前往島嶼","一星通緝開遠自動消失；到南岸靠岸，沿岸找擱淺的破舊木船。",YB,69],["爬進木船取槍","字幕：「就能夠拿到刺客尼帕 .38」。槍在船內地板的隱藏艙門，艙門不明顯時按 L3 + R3 開專注。",YS,120],["順手拿船上的箱子","字幕提到船上還載著不少箱子，可以一併拿取。",YS,140]],
+  note:"阿翊影片字幕寫控制 8.7、自帶消音器；三支影片都指同一把（Assassin Nipa .38）。",
+  shots:[["somi-nipa-1","地圖：目的地標記在島嶼南端"],["somi-nipa-2","船內取得「刺客尼帕 .38 手槍」"]]},
+ {id:"finch",name:"走私客金雀花 425 霰彈槍",sub:"傳說武器（原「金色霰彈槍（海上）」併入）",
+  meta:[["地點","空軍基地小島（梅卡梅影片 0:58），在另一艘船旁"],["交通","開船前往"],["提醒","夜裡看不清楚時注意船上箱子"],["影片",vl(YS,"Somi 2:13")+"、"+vl(YM,"梅卡梅 0:58")+"、"+vl(YJ,"見塵 4:01")]],
+  steps:[["開船到島上","第二個目標，從你目前位置一路開過去。",YB,111],["把船開到標記處","船開到標記位置後下船。",YB,118],["在船上找箱子","字幕：「如果晚上看不清楚」，船上有多個箱子，槍就在其中。",YS,153],["取得霰彈槍","畫面右上角出現「走私客金雀花 425」的提示。作者說傷害極高、操控穩定。",YB,125]],
+  note:"阿翊影片說可永久使用，不分章節。",
+  shots:[["somi-finch-1","取得地點：島邊沙灘"],["somi-finch-2","船上箱子堆，右上角出現武器名"]]},
+ {id:"swamp",name:"沼澤誘餌阿克勒斯",sub:"（Somi 2:41 / 梅卡梅 1:35「螃蟹屋衝鋒槍」相關）",
+  meta:[["地點","卡藤茂斯湖西北側的沼澤"],["提醒","上岸前先準備好武器；先進比較大的那間木屋"],["保險庫密碼","0072（螃蟹屋）；船屋 0212"],["影片",vl(YS,"Somi 2:41")+"、"+vl(YM,"梅卡梅 1:35")+"、"+vl(YJ,"見塵 1:11")]],
+  steps:[["設標記","字幕：「卡藤茂斯湖西北側的沼澤」。",YS,152],["先進大的木屋","「先進入比較大的那一間木屋」。",YS,160],["先進主屋探索","字幕：「可以先進入主屋探索」。",YS,240],["輸入密碼","字幕：「只要輸入 0212」（船屋）。螃蟹屋保險庫密碼為 0072。",YS,256],["上岸前備好武器","字幕提醒。",YS,279]],
+  note:"字幕裡還有「螃蟹屋 VF5」（見下一張卡），兩者可能是同一區域的不同武器，我沒有逐一對應。",
+  shots:[["somi-swamp-1","地圖：卡藤茂斯湖西北側沼澤"],["somi-swamp-2","先進入較大的木屋"],["somi-vf5-2","輸入密碼 0212"]]},
+ {id:"sm69",name:"殘酷獵人的 SM-69 狙擊槍",sub:"舒茲伯利 SM-69（影片中文）；高塔頂樓",
+  meta:[["地點","高塔頂樓（開車到塔的圍欄門口）"],["特性","字幕：「其實這兩把不一樣」，有普通版與獨特版"],["影片",vl(YS,"Somi 3:11")+"、"+vl(YM,"梅卡梅 3:32")+"、"+vl(YJ,"見塵 0:09")]],
+  steps:[["開車到塔的圍欄門口","見塵影片註記：開車到塔的圍欄門口，英文字幕說「到地圖上這個位置，你會看到一座高塔」。",YJ,22],["登上塔頂樓","梅卡梅影片：高塔頂樓拿狙擊步槍。",YM,212],["比較兩把版本","畫面是武器輪盤，兩把 SM-69 並列，傷害 6.8、準確度 8.6。",YS,217]],
+  note:"傳說版與普通版的差異，請看影片的武器輪盤畫面。",
+  shots:[["jc-sm69","見塵：開車到塔的圍欄門口"],["somi-sm69-2","武器輪盤：SM-69 兩把版本"]]},
+ {id:"vf5",name:"螃蟹屋 VF5 衝鋒槍",sub:"傳說武器",
+  meta:[["地點","螃蟹屋（沼澤區的木屋）"],["影片",vl(YS,"Somi 3:51")+"、"+vl(YJ,"見塵 1:11")+"、"+vl(YM,"梅卡梅 1:35")]],
+  steps:[["先進主屋探索","字幕：「可以先進入主屋探索」。",YS,240],["在屋內輸入密碼","保險庫密碼 0072；船屋 0212。",YS,256]],
+  note:"位置細節以見塵影片 1:11 到 3:25 這一段最完整。",
+  shots:[["somi-vf5-1","進入主屋探索"],["somi-vf5-2","輸入密碼"]]},
+ {id:"w22",name:"獵魚王 W-22 小型獵物專用步槍",sub:"傳說武器；原「翠鳥幫消音步槍」併入此卡",
+  meta:[["地點","翠鳥幫小島（梅卡梅 4:06）；濕人灣「漁棚」營地"],["取得方式","營地②大屋內的桌面"],["影片",vl(YS,"Somi 4:30")+"、"+vl(YM,"梅卡梅 4:06")+"、"+vl(YJ,"見塵 8:29")]],
+  steps:[["設標記到翠鳥幫小島","梅卡梅影片 4:06，地圖標記在濕人灣的漁棚營地。",YM,246],["從右側登島","到院子裡先分清①右側小屋與②前方大屋；消音步槍在②大屋內。",YS,308],["進大屋取槍","字幕：「可以順便來這邊收集一下」，畫面出現「獵魚王 W-22 小型獵物專用步槍」。",YS,309]],
+  note:"原圖文貼文的步驟：①小屋鎖門時射擊門把手可進入，但槍不在那裡。",
+  shots:[["somi-w22-1","上岸前先備好武器"],["somi-w22-2","屋內取得「獵魚王 W-22」"],["meka-w22-map","梅卡梅：翠鳥幫小島的地圖"]]},
+ {id:"laird",name:"獵人的賴爾德 350",sub:"獨特版本（Somi 5:00）",
+  meta:[["地點","旅館附近（字幕：「靠近旅館時竟然會聽到尖叫聲」）"],["影片",vl(YS,"Somi 5:00")]],
+  steps:[["走近旅館","字幕：靠近旅館時會聽到尖叫聲，注意這個提示。",YS,322],["進屋拿獨特版","字幕：「獨特版本的賴爾德 350」。",YS,338]],
+  note:"字幕沒有說明確切位置，請看影片。",
+  shots:[["somi-laird-1","靠近旅館時聽到尖叫聲"],["somi-laird-2","獨特版本的賴爾德 350"]]},
+ {id:"drifter",name:"馬拉邦特幫流浪者（金色霰彈槍）",sub:"原「金色品質霰彈槍」、「黃金霰彈槍」併入此卡",
+  meta:[["地點","哈姆雷特當鋪的倉庫（梅卡梅 0:32）"],["取得方式","倉庫桌上"],["影片",vl(YS,"Somi 5:30")+"、"+vl(YM,"梅卡梅 0:32")]],
+  steps:[["打開地圖找到哈姆雷特當鋪","字幕：「打開地圖找到哈姆雷特當鋪」。",YS,338],["進入後找一台車頂裝","字幕：「進去之後找一台車頂裝」（Somi 5:48 前後）。",YS,358],["到桌邊取槍","梅卡梅：「桌上就有黃金霰彈槍」。",YM,42]],
+  note:"原圖文貼文：到達後先觸發隨機事件再繼續。",
+  shots:[["somi-drifter-1","地圖：哈姆雷特當鋪"],["meka-pawn-shotgun","倉庫：桌上就有黃金霰彈槍"]]},
+ {id:"con9",name:"陰謀論者 9 型衝鋒槍",sub:"傳說武器；火箭筒就在旁邊",
+  meta:[["地點","罪惡城倉庫（見塵 6:07 / 梅卡梅 5:55）"],["影片",vl(YS,"Somi 5:48")+"、"+vl(YJ,"見塵 6:07")+"、"+vl(YM,"梅卡梅 5:55")]],
+  steps:[["進入倉庫","Somi 5:48 提到這把槍的位置。",YS,372],["看旁邊","字幕：「而且旁邊竟然還有一把火箭發射器」。",YS,373]],
+  note:"見塵 8 號項目與此同卡；紅色倉庫裡另有「9 型衝鋒槍」是普通版，不是陰謀論者版。",
+  shots:[["somi-con9-1","進入倉庫後找一台車"],["somi-con9-2","火箭發射器就在旁邊"]]},
+ {id:"vfg1",name:"黑蛾幫 VF-G1",sub:"傳說武器（Somi 6:21）",
+  meta:[["地點","草森灣一帶，一段掛著藍色帆布的圍欄附近"],["影片",vl(YS,"Somi 6:21")]],
+  steps:[["找到藍色帆布圍欄","字幕：「一段掛著藍色帆布的圍欄」。",YS,392],["小心周圍幫派成員","字幕：「先小心周圍的幫派成員」。",YS,434]],
+  note:"字幕沒有說明槍的確切位置，請看影片。",
+  shots:[["somi-vfg1-1","草森灣一帶，藍色帆布圍欄"],["somi-kz59-1","小心周圍的幫派成員"]]},
+ {id:"kz59",name:"馬拉邦特幫 KZ-59（黃金 AK）",sub:"傳說武器；原「黃金 AK」併入",
+  meta:[["地點","哈姆雷特的幫派據點／廢棄修車場（見塵：槍在貨櫃圍起來的區域裡面）"],["取得方式","雨棚下工作台上的槍盒"],["需要","戰鬥：幫派據點有 7 到 8 名敵人"],["影片",vl(YS,"Somi 7:03")+"、"+vl(YJ,"見塵 7:27")]],
+  steps:[["到據點","需要先戰鬥，處理 7 到 8 名敵人。",YJ,447],["找到雨棚下的工作台","見塵註記：「雨棚下工作台上的槍盒」。",YJ,500],["取得 KZ-59","畫面：武器庫裡的「馬拉邦他幫 KZ-59」，傷害 5.4、準確度 4.5。",YS,572]],
+  note:"YG tech 影片（「車輛與賺錢」章的明日之星＋黃金 AK47）也在新星修車廢棄場提到黃金 AK47，但沒讀到位置。舊版卡片寫的是「院內沙發後方的武器箱」，與見塵影片「雨棚下工作台上的槍盒」不一致；兩者可能指同一個據點的不同角度，請以實際看到的為準。",
+  shots:[["jc-kz59","見塵：雨棚下工作台上的槍盒"],["somi-locker-1","武器櫃：馬拉邦他幫 KZ-59"]]},
+ {id:"sms01",name:"槍械迷 SMS-01 狙擊槍",sub:"稀有；長型武器（原狙擊槍貼文併入）",
+  meta:[["地點","屋外窗戶查看屋內（紅箭頭）；貼文沒寫名稱"],["建議","前往前先手動存檔；沒刷出就重新載入存檔再試"],["時機","留言說法（未驗證）：晚上去才有"],["影片",vl(YS,"Somi 7:34")]],
+  steps:[["先手動存檔","沒刷出這把槍時，可重新載入存檔再試。"],["走到房子附近","對照下方地圖截圖，槍械圖示與房屋圖示。"],["接近房屋","畫面上方顯示距離，截圖為 0.11 英里。"],["在窗外查看屋內","蹲在窗外，紅色箭頭指向窗內。"],["取得後確認","武器輪盤的長型武器欄出現「槍械迷 SMS-01」。"]],
+  note:"留言說法（未驗證）：屋主被敲暈後警察會來，被發現前先離開；浴室有火箭筒等物品，一樓車庫也有東西。有人試了 10 次、也有人刷了 3 小時都沒出現。",
+  shots:[["somi-sms01-1","Somi 影片：屋內無人"]],
+  extra:`<p class="sub2"><b>其他畫面</b></p><div class="gal">
+    <figure><button type="button" class="zoom" data-full="assets/sniper/s1.webp"><img src="assets/sniper/s1.webp" alt="角色手持狙擊槍" loading="lazy"></button><figcaption>持槍畫面</figcaption></figure></div>`},
+ {id:"cockroach",name:"蟑螂極限 556 突擊步槍",sub:"自帶消音；原「金色突擊步槍 Cockroach Extreme 556」併入",
+  meta:[["地點","罪惡城倉庫（梅卡梅 5:55 / 阿翊 0:44）"],["取得方式","入口右轉直走，到地上有衛生紙處"],["附近","破片手榴彈箱、保險箱、Anthony Hearn 收藏卡；另有 Mark-14 MGL 榴彈發射器"],["影片",vl(YS,"Somi 8:22")+"、"+vl(YM,"梅卡梅 5:55")+"、"+vl(YA,"阿翊 0:44")]],
+  steps:[["把目的地設在標記處","阿翊影片先說明地圖範圍，標記後前往。",YA,20],["入口後右轉直走","一直往前，到地上看到衛生紙。",YA,36],["拿蟑螂極限 556","每個彈匣 40 發，彈藥總量 1504。",YA,44],["同地點拿榴彈發射器","梅卡梅：同一個地點還有米爾科姆 Mark-14 MGL 榴彈發射器，旁邊有 GLR40 發射器。",YM,382]],
+  note:"榴彈發射器與機槍的彈藥可到槍店補充，火箭彈目前只能用搜的（梅卡梅提醒）。",
+  shots:[["somi-cockroach-1","Somi：先不用急著搜房間"],["meka-cockroach-map","梅卡梅：罪惡城倉庫地圖（紅圈）"],["meka-mark14","同一處：Mark-14 MGL"]]},
+ {id:"m306",name:"黑色雄鷹進口 M306 TMR 精準射手步槍",sub:"金色；消音（梅卡梅 4:31）",
+  meta:[["地點","倉庫鐵籠（梅卡梅 4:31 / 阿翊 3:00）"],["特性","瞄準鏡可變焦，遠近都好用；傷害 6.2、準確度 9.5"],["影片",vl(YM,"梅卡梅 4:31")+"、"+vl(YA,"阿翊 3:00")]],
+  steps:[["進入倉庫","走到倉庫鐵籠一帶。",YM,271],["看右邊的堆高機","阿翊影片：上堆高機，開向貨箱，前方就是「Blacker Import N306TNR」。",YA,172],["拿槍","字幕說這把金色武器是精準射手步槍。",YA,180]],
+  note:"原「金色精準射手步槍 Blacker Import N306TNR」併入此卡，兩影片是同一把。",
+  shots:[["meka-m306","武器資訊與變焦瞄準鏡"]]},
+ {id:"hat",name:"H-AT 火箭筒",sub:"買不到的重火力（梅卡梅 6:31 / 見塵 加碼）",
+  meta:[["地點","巴爾塞羅（罪惡城西北邊）房車地下室（梅卡梅 6:31）；另一處：槍械狂熱者小屋有火箭筒＋M60（梅卡梅 7:20）"],["取得方式","地下室、保險箱旁；字幕：「旁邊竟然還有一把火箭發射器」"],["提醒","拿著火箭筒進槍舖會不見（留言說法）；重武器用完放回車子後車廂"],["影片",vl(YM,"梅卡梅 6:31")+"、"+vl(YJ,"見塵 7:18")+"、"+vl(YA,"阿翊 1:24")]],
+  steps:[["設標記，開車前往","梅卡梅：開到罪惡城西北邊的巴爾塞羅。",YM,392],["進地下室","阿翊影片：進門左轉直走，找到地下室門，開門下樓一路往前。",YA,104],["保險箱旁取火箭筒","字幕說它發射的彈藥會在撞擊時爆炸，適合炸大型卡車。",YA,120],["順手拿其他武器","同一個地下室有金色 Conspirator Type-9 衝鋒槍、手榴彈與急救包。",YA,124]],
+  note:"重武器容易打死人，犯罪檔案會變成暴力，想打特定結局的玩家要小心（梅卡梅提醒）。YG tech 影片（「車輛與賺錢」章）也拍到工作台上的 H-AT 發射器，地點是昏暗的儲藏室，是否與上面的巴爾塞羅地下室同一處，影片沒說。",
+  shots:[["meka-hat-map","地圖：開到罪惡城西北邊的巴爾塞羅"],["jc-hat","見塵：同一個軍械庫裡的 H-AT 發射器"],["meka-launcher","還有買不到的火箭筒"],["meka-heavy-tip","兩位主角可以各湊一套"]]},
+ {id:"redwh",name:"紅色倉庫：公爵 556、9 型衝鋒槍、卡林加 .50 手槍",sub:"一個地點三把槍（見塵 4:34 到 6:07）",
+  meta:[["地點","紅色倉庫（見塵影片）"],["內容","公爵 556 突擊步槍、9 型衝鋒槍（普通版）、卡林加 .50 手槍"],["影片",vl(YJ,"見塵 4:34 / 5:18 / 5:27")]],
+  steps:[["從側門進到主廳","見塵註記：「從側門進到主廳」。",YJ,290],["主廳地上拿 9 型衝鋒槍","註記：「（普通版，不是陰謀論者版）」。",YJ,323],["走進辦公室","註記：「走進辦公室」，裡面有很多值錢物品；卡林加 .50 在這裡。",YJ,333]],
+  note:"此卡是見塵影片獨有的三把，其他影片沒有講。",
+  shots:[["jc-warehouse1","從側門進到主廳"],["jc-warehouse2","主廳地上：9 型衝鋒槍（普通版）"],["jc-warehouse3","走進辦公室"]]}
+];
+// 地圖截圖：src 為整頁圖；W/H 為原圖尺寸；x,y,cw,ch 為裁切區（原圖像素）
+const MAPS={
+ ak:{src:"assets/maps/ak.webp",W:810,H:1080,x:46,y:200,cw:422,ch:240,cap:"原圖地圖：哈姆雷特的目的地標記，再沿區域右側繞行"},
+ w22:{src:"assets/maps/w22.webp",W:1086,H:1448,x:62,y:262,cw:562,ch:362,cap:"原圖地圖：濕人灣的「漁棚」營地"},
+ pistol:{src:"assets/maps/pistol.webp",W:1086,H:1448,x:62,y:284,cw:560,ch:344,cap:"原圖地圖：青色標記為目的地，位在右側長條島嶼南端"},
+ shotgun:{src:"assets/maps/shotgun.webp",W:1086,H:1448,x:62,y:280,cw:556,ch:326,cap:"原圖地圖：哈姆雷特的位置"},
+ sms01:{src:"assets/sniper/s2.webp",W:1080,H:810,x:0,y:0,cw:1080,ch:810,cap:"地圖截圖：標有槍械圖示與房屋圖示"}
+};
+function mapHtml(k,name){
+  const m=MAPS[k]; if(!m)return "";
+  // 最大寬度限制在原圖像素寬度，避免放大造成模糊；點擊可看整頁原圖
+  return `<figure class="map" style="max-width:${m.cw}px"><button type="button" class="zoom" data-full="${m.src}" aria-label="放大看${name}的原圖"><div class="crop" style="aspect-ratio:${m.cw}/${m.ch}"><img src="${m.src}" alt="${name}的地圖位置截圖" loading="lazy" style="width:${(m.W/m.cw*100).toFixed(2)}%;left:${(-m.x/m.cw*100).toFixed(2)}%;top:${(-m.y/m.ch*100).toFixed(2)}%"></div></button><figcaption>${m.cap}（點圖看整頁原圖）</figcaption></figure>`;
+}
+// 步驟配圖：{武器id:{步驟序號(0起算):[畫面檔名或 "map:地圖key", 說明]}}；沒配到步驟的 shots 會放在卡片下方「其他畫面」
+const STEP_IMG={
+ hoker:{0:["somi-honker-1","唐尼的拖車屋內（Somi 影片）"],1:["c1-donny-glasses","拖車內架子上的金框墨鏡（玫玫物語）"],2:["c1-revolver","後車廂畫面右下的提示：唐尼的霍克與立德 .38 左輪手槍（玫玫物語）"]},
+ nipa:{0:["map:pistol"],1:["somi-nipa-1","Somi：地圖上目的地標在島嶼南端"],2:["somi-nipa-2","船內取得「刺客尼帕 .38 手槍」"]},
+ finch:{1:["somi-finch-1","取得地點：島邊沙灘"],2:["somi-finch-2","船上箱子堆，右上角出現武器名"]},
+ swamp:{0:["somi-swamp-1","地圖：卡藤茂斯湖西北側沼澤"],1:["somi-swamp-2","先進入較大的木屋"],3:["somi-vf5-2","輸入密碼 0212"]},
+ sm69:{0:["jc-sm69","見塵：開車到塔的圍欄門口"],2:["somi-sm69-2","武器輪盤：SM-69 兩把版本"]},
+ vf5:{0:["somi-vf5-1","進入主屋探索"],1:["somi-vf5-2","輸入密碼"]},
+ w22:{0:["map:w22"],1:["somi-w22-1","上岸前先備好武器"],2:["somi-w22-2","屋內取得「獵魚王 W-22」"]},
+ laird:{0:["somi-laird-1","靠近旅館時聽到尖叫聲"],1:["somi-laird-2","獨特版本的賴爾德 350"]},
+ drifter:{0:["map:shotgun"],2:["meka-pawn-shotgun","倉庫：桌上就有黃金霰彈槍"]},
+ con9:{0:["somi-con9-1","進入倉庫後找一台車"],1:["somi-con9-2","火箭發射器就在旁邊"]},
+ vfg1:{0:["somi-vfg1-1","草森灣一帶，藍色帆布圍欄"],1:["somi-kz59-1","小心周圍的幫派成員"]},
+ kz59:{0:["map:ak"],1:["jc-kz59","見塵：雨棚下工作台上的槍盒"],2:["somi-locker-1","武器櫃：馬拉邦他幫 KZ-59"]},
+ sms01:{1:["map:sms01"],2:["assets/sniper/s3.webp","接近房屋：距離 0.11 英里"],3:["assets/sniper/s4.webp","蹲在窗外，紅箭頭指向窗內"],4:["assets/sniper/s5.webp","取得後：槍械迷 SMS-01"]},
+ cockroach:{0:["meka-cockroach-map","梅卡梅：罪惡城倉庫地圖（紅圈）"],3:["meka-mark14","同一處：Mark-14 MGL"]},
+ m306:{2:["meka-m306","武器資訊與變焦瞄準鏡"]},
+ hat:{0:["meka-hat-map","地圖：開到罪惡城西北邊的巴爾塞羅"],2:["jc-hat","見塵：同一個軍械庫裡的 H-AT 發射器"],3:["meka-launcher","還有買不到的火箭筒"]},
+ redwh:{0:["jc-warehouse1","從側門進到主廳"],1:["jc-warehouse2","主廳地上：9 型衝鋒槍（普通版）"],2:["jc-warehouse3","走進辦公室"]}
+};
+const imgSrc=f=>f.includes("/")?f:F(f);
+function stepFig(w,i){
+  const v=(STEP_IMG[w.id]||{})[i]; if(!v)return "";
+  if(v[0].startsWith("map:"))return mapHtml(v[0].slice(4),w.name);
+  return `<figure class="st"><button type="button" class="zoom" data-full="${imgSrc(v[0])}" aria-label="放大：${v[1]}"><img src="${imgSrc(v[0])}" alt="${v[1]}" loading="lazy"></button><figcaption>${v[1]}</figcaption></figure>`;
+}
+function leftover(w){
+  const used=new Set(Object.values(STEP_IMG[w.id]||{}).map(v=>v[0]));
+  const rest=(w.shots||[]).filter(s=>!used.has(s[0]));
+  if(!rest.length)return "";
+  return `<p class="sub2"><b>其他畫面</b></p><div class="gal">${rest.map(s=>`<figure><button type="button" class="zoom" data-full="${F(s[0])}" aria-label="放大：${s[1]}"><img src="${F(s[0])}" alt="${s[1]}" loading="lazy"></button><figcaption>${s[1]}</figcaption></figure>`).join("")}</div>`;
+}
+const wl=document.getElementById("weaponList");
+WEAPONS.forEach(w=>{
+  const id="weapons-"+w.id;allIds.push({id,tab:"weapons"});
+  const card=document.createElement("article");card.className="weapon";
+  card.innerHTML=`<div class="w-head"><h3>${w.name}<small>${w.sub}</small></h3><button type="button" class="got" data-id="${id}" aria-pressed="${applied[id]?"true":"false"}">已取得</button></div>
+  <dl class="w-meta">${w.meta.map(m=>`<dt>${m[0]}</dt><dd>${m[1]}</dd>`).join("")}</dl>
+  ${STEP_IMG[w.id]?"":mapHtml(w.id,w.name)}
+  <ol class="steps">${w.steps.map((s,i)=>`<li><b>${s[0]}</b><span>${s[1]}</span>${stepFig(w,i)}${s[2]?`<a class="ytl" href="https://youtu.be/${s[2]}?t=${s[3]}" target="_blank" rel="noopener noreferrer">▶ 影片 ${tm(s[3])}</a>`:""}</li>`).join("")}</ol>
+  ${leftover(w)}
+  <p class="w-note"><b>記住這一點：</b>${w.note}</p>${w.extra||""}`;
+  const btn=card.querySelector(".got");
+  btn.addEventListener("click",()=>{
+    const on=btn.getAttribute("aria-pressed")!=="true";
+    btn.setAttribute("aria-pressed",on?"true":"false");
+    if(on)applied[id]=1;else delete applied[id];
+    save();update();
+  });
+  wl.appendChild(card);
+});
+// 摔角手影片：分組 → 步驟；q 是字幕（[秒, 原句]）
+const YW="3ko7ycLUULk";
+const WR=[
+ {title:"德式背摔按法",sub:"影片 0:20：從背後抱住再摔出去",items:[
+  {t:"從背後抱住對方",sec:24,d:"靠近對方，按住 R2 就能從背後抱住他們。",q:[[24,"按住R2就可以從背後抱住他們"]],imgs:[["wr-r2","畫面左上標示 R2"]]},
+  {t:"對方背對我們：R2 + L",sec:29,d:"畫面標示「R2 + L」，字幕：像現在背對後面。完整按法的畫面提示是「R2 + L + □/○（經典模式）」，這一幀沒有字幕。",q:[[21,"如果對方是背對我們的話"],[29,"像現在背對後面"]],imgs:[["wr-r2l","畫面左上標示 R2 + L"],["wr-classic","完整提示：R2 + L + □/○（經典模式），對方倒在沙灘上"]]},
+  {t:"對方面對我們",sec:41,d:"字幕：轉過來之後再推左搖桿，然後再點 □/○（經典模式）；所以左搖桿要往前推。",q:[[41,"那如果對方是面對著我們的話"],[47,"轉過來之後再推左搖桿，然後再點 □/○（經典模式）"],[54,"所以我們的左搖桿就要往前推"]],warn:"第 47 秒那句我讀到的是「再點圓/O（經典模式）」，字型模糊，我依 0:36 畫面提示「□/O」整理成 □/○，請以影片為準。"}
+ ]},
+ {title:"各種有趣動作",sub:"影片 0:55（我只讀到兩句字幕）",items:[
+  {t:"在陽台摔人",sec:72,d:"字幕：就可以直接將對方摔出去。畫面是旅館陽台。",q:[[72,"就可以直接將對方摔出去"]]},
+  {t:"當成特殊的處決動畫",sec:79,d:"字幕：可以把他當成是特殊的處決動畫。畫面是走廊上抓住一名男子。",q:[[79,"可以把他當成是特殊的處決動畫"]]}
+ ]},
+ {title:"下車不熄火",sub:"影片 1:33：搶劫與逃脫時馬上走",items:[
+  {t:"下車時連按兩次 △",sec:95,d:"字幕：在下車的時候連按兩次 △，就可以不用熄火下車。不用浪費時間再發動引擎。",q:[[95,"在下車的時候連按兩次△"],[98,"就可以不用熄火下車"],[102,"不用浪費時間再發動引擎"]],imgs:[["wr-exit","字幕：在下車的時候連按兩次 △"]]},
+  {t:"為什麼有用",sec:105,d:"字幕：搶劫或是逃脫的時候是一個蠻重要的技巧；有時候是單腳踢、踢完馬上跑，之後一上車就可以馬上出發了，行雲流水。",q:[[105,"在搶劫或是逃脫的時候是一個蠻重要的技巧"],[109,"有時候是單腳踢 踢完馬上跑"],[119,"一上車就可以馬上出發了 行雲流水"],[121,"相信大家應該都有遇過在逃亡的時候上車"],[128,"用這招就可以大大的降低這種狀況發生"]],imgs:[["wr-getaway","字幕：搶劫或是逃脫的時候是一個蠻重要的技巧"],["wr-car","一上車就馬上出發"]]},
+  {t:"靠近路人按一下攻擊",sec:136,d:"字幕：有時候靠近 NPC 按一下攻擊鍵不會直接扁他。我沒讀到後半句。",q:[[136,"有時候靠近NPC按一下攻擊鍵不會直接扁他"],[144,"所以有時候你開車開到無聊"],[152,"把街頭幹架的趣味程度又提升一個檔次了"]]}
+ ]},
+ {title:"街頭幹架",sub:"影片 2:40（字幕被截斷，只讀到一句）",items:[
+  {t:"不只是揍拳",sec:160,d:"字幕：不像以前都只能一直揍拳而已，讓無聊的……（後半句我沒讀到）。畫面是街邊與一群人對打。",q:[[160,"不像以前都只能一直揍拳而已 讓無聊的"]]}
+ ]},
+ {title:"摔角手面具在哪",sub:"影片 3:03：貨櫃屋的桌子上（要先打贏摔角手）",items:[
+  {t:"在地圖設目的地",sec:192,d:"地圖分頁顯示「馬里亞納郡」，綠色目的地標記，提示距離 41 公尺；畫面左下角的區域名是「棕櫚大街」（我判斷是玩家所在區域，不是目的地名）。我沒有座標，影片也沒有講。",q:[[184,"最後來跟大家分享摔角手面具要怎麼取得"]],imgs:[["wr-map","地圖：馬里亞納郡，目的地標記"]]},
+  {t:"跑到貨櫃屋（拖車屋）",sec:200,d:"沿著木籬笆邊的小路跑過去，貨櫃屋是綠色條紋的舊拖車。",imgs:[["wr-run","沿著籬笆跑到屋後"],["wr-trailer","綠條紋的貨櫃屋門前"]]},
+  {t:"敲兩次門",sec:208,d:"第一次敲，他會叫你滾；字幕：那我們要稍等一下，再敲第二次門。",q:[[208,"敲第一次的時候他會叫你滾"],[210,"那我們要稍等一下 再敲第二次門"]],imgs:[["wr-knock2","字幕：再敲第二次門"]]},
+  {t:"打贏摔角手",sec:227,d:"第二次敲門後，摔角手出來，字幕：來錯社區了！接著是一場對打：我取樣到畫面中他被壓在鋪著藍色帆布的擂台上、他曾站在梯子上的高處，但這段沒有字幕，打法請看影片 3:50 到 4:55。",q:[[227,"來錯社區了！"]],imgs:[["wr-boss","摔角手出門，抓住你"]]},
+  {t:"進貨櫃屋拿面具",sec:316,d:"字幕：將他打敗之後就可以進去他的貨櫃屋；面具就在貨櫃屋最深處的桌子上。",q:[[322,"將他打敗之後就可以進去他的貨櫃屋"],[326,"面具就在貨櫃屋最深處的桌子上"]],imgs:[["wr-desk","字幕：面具就在貨櫃屋最深處的桌子上"],["wr-mask","戴上面具後的拍照畫面（影片 5:34）"]]}
+ ]}
+];
+function renderGroups(hostId,groups,vid){
+  const host=document.getElementById(hostId);
+  groups.forEach((g,gi)=>{
+    const det=document.createElement("details");det.className="chap";det.open=true;
+    const lis=g.items.map(it=>`<li><b>${it.t}</b><span>${it.d}</span>${(it.q||[]).map(q=>`<span class="q">字幕 ${tm(q[0])}：「${q[1]}」</span>`).join("")}${it.warn?`<span class="warn">${it.warn}</span>`:""}${(it.imgs||[]).map(s=>`<figure class="st"><button type="button" class="zoom" data-full="${F(s[0])}" aria-label="放大：${s[1]}"><img src="${F(s[0])}" alt="${s[1]}" loading="lazy"></button><figcaption>${s[1]}</figcaption></figure>`).join("")}<a class="ytl" href="https://youtu.be/${vid}?t=${it.sec}" target="_blank" rel="noopener noreferrer">▶ 影片 ${tm(it.sec)}</a></li>`).join("");
+    det.innerHTML=`<summary><span class="no cnum">${gi+1}</span><span class="ctitle">${g.title}<small>${g.sub}</small></span></summary><div style="padding:0 18px 16px"><ol class="steps">${lis}</ol></div>`;
+    host.appendChild(det);
+  });
+}
+renderGroups("wrList",WR,YW);
+// 車輛與賺錢（YG tech）：時間為我實際看到畫面的秒數
+const YG="472k7Y0ttoA";
+const CARS=[
+ {title:"刷錢方法優化版",sub:"影片 2:21（描述寫 11/21 實測還能用；社群版本與短片版見「社群賺錢與載具」的倉庫刷錢）",items:[
+  {t:"先說明：這是上次影片的優化版",sec:141,d:"畫面標題「賺錢大法更新版」。偷車賣給銷贓商阿部：第二章同一人偷一次只有 3600，畫面標 4800 是因為身上有其他東西；字幕：大家放心大膽地去偷。",q:[[143,"先來說一下上次這部影片教的刷錢優化版"]],imgs:[["yg-cars-map","銷贓商阿部：4800（第二章同一人偷一次 3600）"]]},
+  {t:"地點：哈姆雷特右上角的十字路口",sec:155,d:"字幕連著兩句：同樣是哈姆雷特的右上角；開到地圖的這個十字路口。我取樣的畫面被 YouTube 結尾卡片蓋住，沒有看到十字路口名稱，也沒有座標。",q:[[155,"同樣是哈姆雷特的右上角"],[167,"開到地圖的這個十字路口"]]},
+  {t:"千萬不要開小熊車",sec:179,d:"畫面是一台畫著小熊圖案的廂型車停在貨櫃場。下一句字幕是「你一定要重新讀檔」，我沒讀到兩句之間的話，推測是開錯車時要讀檔重來，請看影片。",q:[[179,"但我要提醒一下千萬不要開到小熊車"],[191,"你一定要重新讀檔"]],imgs:[["yg-bear","小熊圖案的廂型車（影片 3:00 前後）"]]},
+  {t:"第三章之後",sec:203,d:"字幕：但如果你第三章開到亞斯馬尼……（後半句我沒讀到），畫面是地圖上的罪惡戴爾郡。",q:[[203,"但如果你第三章開到亞斯馬尼"]]}
+ ]},
+ {title:"怎麼偷車與登記",sub:"影片 3:31（第二章：技工摩西）",items:[
+  {t:"第二章：先認識技工摩西",sec:227,d:"字幕：維琪會介紹一個叫做摩西的技工；偷車不會觸發警報的「翹棍」也是這時候開啟；之後要等主線開放，摩西會給一個任務，叫你去偷一輛白色的吉普車。",q:[[215,"可能有些玩家還不知道要怎麼把車變成自己的"],[227,"維琪會介紹一個叫做摩西的技工"],[239,"還有偷車不會觸發警報的翹棍也是在這個時候開啟"],[251,"要等到之後的主線開放"],[263,"摩西會給你一個任務叫你去偷一輛白色的吉普車"]]},
+  {t:"沒錢登記怎麼辦：先買車庫",sec:275,d:"手機 App「罪惡市房地產」可以買車庫，畫面例子：費拉薩塔道車庫 $30,000、1 個停車位、在卡普里。字幕：就可以把這些車庫都買一買。社群貼文（@su_o925）也說：搶到喜歡的車但沒錢登記，先買一間便宜車庫把車放進去不會消失，有錢再登記。",q:[[275,"就可以把這些車庫都買一買"]],imgs:[["yg-garage-app","手機 App：5 週可購買房地產，費拉薩塔道車庫 $30,000"]]}
+ ]},
+ {title:"保羅沃克的綠色跑車",sub:"影片 4:37",items:[
+  {t:"車在車庫裡，沒有追蹤器",sec:326,d:"字幕：那沒有追蹤器就代表你進度打到第二章……（後半句我沒讀到）。我沒有取樣到取車地點。",q:[[326,"那沒有追蹤器就代表你進度打到第二章"]]},
+  {t:"不要洗掉塗裝",sec:353,d:"字幕：把保羅沃克的塗裝洗掉就完全失去它的價值了。畫面是改裝選單，車名顯示「'97 半影使者 FF」（我只看到一部分文字）。",q:[[340,"不過有一點要提醒一下各位"],[353,"把保羅沃克的塗裝洗掉就完全失去它的價值了"]],imgs:[["yg-wash","改裝選單：完整套件（塗裝）"]]}
+ ]},
+ {title:"凡妮莎的粉紅跑車",sub:"影片 5:57（我實際看到是 6:50 到 7:05）",items:[
+  {t:"到新的藏身處，得知狗名",sec:366,d:"字幕：到了新的藏身處；得知狗狗的名字叫做小瑪芬（相框上寫 MUFFINS）。接著畫面是筆電登入，輸入欄顯示「小瑪芬-女王-15」，字幕沒有說明用途（我推測是密碼，沒確認）。",q:[[366,"到了新的藏身處"],[380,"得知狗狗的名字叫做小瑪芬"]]},
+  {t:"簡訊：去珍珠區輸入 92665",sec:410,d:"字幕：說是要送凡妮莎一個禮物。簡訊內容（畫面左側中文）：去阿姨家旁邊的珍珠區，輸入 92665 就可以拿了；提示：不是另一隻泰迪熊。我沒有取樣到實際輸入地點。",q:[[410,"說是要送凡妮莎一個禮物"]],imgs:[["yg-vanessa-text","簡訊：去阿姨家旁邊的珍珠區，輸入 92665"]]},
+  {t:"粉紅跑車在車庫",sec:425,d:"傑森傳訊：你知道之前住我們這裡的舞者嗎？有個傢伙在車庫留了一輛很酷的車給她……（畫面右下角，我只讀到前半）。這一段我沒有讀到字幕。",imgs:[["yg-pink","車庫裡的粉紅跑車（右下角：傑森的訊息）"]]}
+ ]},
+ {title:"鐵絲網塗裝肌肉車＋傳奇短管槍",sub:"影片 7:05（我實際看到標題卡在 7:08，約每 5 秒取樣）",items:[
+  {t:"車款：氮氣肌肉車（鐵絲網塗裝）",sec:428,d:"標題卡「氮氣肌肉車」，字幕：再來要介紹的是這台鐵絲網塗裝的肌肉車。畫面是一台黑色肌肉車在公路上行駛。",q:[[428,"再來要介紹的是這台鐵絲網塗裝的肌肉車"]],imgs:[["yg-muscle-title","標題卡：氮氣肌肉車"]]},
+  {t:"地點：罪惡城左上角的安柏西亞",sec:433,d:"字幕：位置就在罪惡城市左上角，安柏西亞這個點。地圖上白線框出的範圍就是安柏西亞，標記在市區東側，沒有座標。",q:[[433,"位置就在罪惡城市左上角 安柏西亞這個點"]],imgs:[["yg-muscle-map","地圖：安柏西亞區域（白線範圍）"]]},
+  {t:"沒有黃點標示，要先在別處得到消息",sec:438,d:"字幕：我逛到這邊的時候他沒有像其他地方標黃點；估計應該是你要在哪邊先獲得消息才會知道吧。畫面是在一棟磚造倉庫旁抓住一個人（牆上有「EMPLOYEES ONLY」告示），之後走進一間昏暗的房間。作者沒有說是在哪邊獲得消息，所以怎麼觸發我不知道。",q:[[438,"我逛到這邊的時候他沒有像其他地方標黃點"],[443,"估計應該是你要在哪邊先獲得消息才會知道吧"]],imgs:[["yg-muscle-alley","倉庫旁（EMPLOYEES ONLY 告示）"]]},
+  {t:"順便拿傳奇終章幫短管槍",sec:448,d:"字幕：總之在這邊你可以順便拿到一把傳奇終章幫短管槍。畫面右側拾取提示是「終章幫短管槍」，地點是暗色的休息室（沙發、桌椅、霓虹燈）。",q:[[448,"總之在這邊你可以順便拿到一把傳奇終章幫短管槍"]],imgs:[["yg-sawedoff","休息室：右側提示「終章幫短管槍」"]]},
+  {t:"取車與特色",sec:453,d:"字幕：重點是有氮氣加速可以玩。畫面是在車庫（有 HOG STARS 招牌與美國國旗）內，左下顯示任務名「鐵絲網鐵腕」。最後一句：各位有興趣趕快把它開回去收藏吧。我沒讀到取車需要做什麼。",q:[[453,"重點是有氮氣加速可以玩"],[456,"各位有興趣趕快把他開回去收藏吧"]],imgs:[["yg-nitro","車庫裡的肌肉車，左下任務名「鐵絲網鐵腕」"]]}
+ ]},
+ {title:"紫水艾默瑞思",sub:"影片 7:38 到 8:10（標題卡在 7:41）",items:[
+  {t:"車款：紫水艾默瑞思",sec:458,d:"畫面：夜間公路上開著一台車底有紫色底盤燈的跑車（7:38）；7:41 出現標題卡「紫水艾莫瑞思」，字幕寫「紫水 艾默瑞斯」，各處譯名略有不同。",q:[[458,"接下來是這台超級跑車"],[461,"紫水 艾默瑞斯"]],imgs:[["yg-purple-title","標題卡：紫水艾莫瑞思（7:41）"]]},
+  {t:"地點：Vice City 右邊的瓦克斯曼島、貨櫃倉儲場",sec:464,d:"字幕：位置在 vice city 右邊的瓦克斯曼島；有一個查特菲爾德倉儲與物流。地圖上有一個「搶劫機會」標記，說明文字：「一隊超跑車開進了這個貨櫃場。」畫面右下角標了「瓦克斯曼島」字樣，沒有座標。島名與倉儲名稱是字幕原樣，我沒有交叉驗證遊戲內名稱。",q:[[464,"位置在vice city右邊的瓦克斯曼島"],[467,"有一個查特菲爾德倉儲與物流"]],imgs:[["yg-purple-map","地圖：搶劫機會標記，位於 Vice City 右側的島"],["yg-purple-warehouse","同一標記，字幕提到的倉儲場（7:47）"]]},
+  {t:"進入方式：從北面的箱子爬進去",sec:470,d:"字幕：我們可以從北面的箱子爬進去。畫面：角色蹲在貨櫃旁（泥地、輪胎、油桶），遠處停著幾台跑車。",q:[[470,"我們可以從北面的箱子爬進去"]],imgs:[["yg-purple-climb","貨櫃旁：從北面的箱子爬進去（7:50）"]]},
+  {t:"跑車被搬進貨櫃準備運走",sec:474,d:"字幕：你會看到一台紫水超跑被搬到貨櫃裡面準備運走；但一樣是沒有追蹤器的。畫面：貨櫃場外牆，之後是車庫裡的紫藍色跑車（紫色底盤燈）。",q:[[474,"你會看到一台紫水超跑被搬到貨櫃裡面準備運走"],[490,"但一樣是沒有追蹤器的"]],imgs:[["yg-container","貨櫃場外牆（7:54）"],["yg-purple","車庫裡的紫水艾默瑞思：沒有追蹤器"]]}
+ ]},
+ {title:"紅寶石艾默瑞思＋傳說武器",sub:"影片 8:20",items:[
+  {t:"紅黑配色的艾默瑞思",sec:506,d:"字幕：紅黑配色的艾默瑞思。換裝備搶劫比較麻煩：「搶劫換裝備的時候比較麻煩一點」。社群補充（Instagram @ezgoson，步驟見「社群賺錢與載具」）：車輛資訊顯示皇家紅寶石艾默瑞思，權限已解鎖、保全已解除、追蹤器無；出售價值 $30,000、登記費用 $29,900。",q:[[506,"紅黑配色的艾默瑞思"]]},
+  {t:"豪宅樓上有傳說武器",sec:520,d:"字幕：你進去這豪宅的樓上還有一個傳說武器；畫面武器牆顯示「KINGPIN HEATHEN ASSAULT RIFLE」。",q:[[520,"你進去這豪宅的樓上還有一個傳說武器"]],imgs:[["yg-heathen","武器牆：KINGPIN HEATHEN ASSAULT RIFLE"]]}
+ ]},
+ {title:"明日之星＋黃金 AK47",sub:"影片 8:54",items:[
+  {t:"新星修車廢棄場",sec:537,d:"字幕：有一間新星修車廢棄場；在這邊可以獲得副手的「明日之星」，也有黃金 AK47。我沒有讀到黃金 AK47 的位置（可對照上面金色武器的 KZ-59）。",q:[[537,"有一間新星修車廢棄場"],[550,"只不過各位來這邊還有一個東西絕對要拿"]],warn:"字幕「還有一個東西絕對要拿」的畫面同時出現拾取提示「滴霧電子菸」，我不確定這就是他說的東西。",imgs:[["yg-junkyard","新星修車廢棄場（8:57）"],["yg-tomorrow","副手明日之星"]]}
+ ]},
+ {title:"卡拉卡拉四驅車＋老爺車 556＋火箭炮",sub:"影片 9:20",items:[
+  {t:"卡拉卡拉四驅車",sec:565,d:"字幕：又大又好看，也有著不錯的載貨量（畫面是橘色皮卡停在車庫）。",q:[[565,"又大又好看 也有著不錯的載貨量"]],imgs:[["yg-caracara","卡拉卡拉四驅車：登記"]]},
+  {t:"廠房前面小屋的傳奇突擊步槍",sec:580,d:"字幕：一個是在廠房前面小屋就可以拿到的傳奇突步。畫面是 2D 地圖，標記在海邊的小屋，沒有座標。是否對應「金色武器」章的某張卡，我沒有比對。",q:[[580,"一個是在廠房前面小屋就可以拿到的傳奇突步"]],imgs:[["yg-shack-map","地圖：廠房前面的小屋"]]},
+  {t:"H-AT 火箭筒",sec:594,d:"字幕：以後誰敢在路上幹誰我比我中指。畫面：昏暗的儲藏室，工作台上放著「H-AT 發射器」（可對照金色武器的 H-AT 卡）。作者說這是他首次在 GTA6 拿到火箭炮。",q:[[594,"以後誰敢在路上幹誰我比我中指"]],imgs:[["yg-hat","工作台上的 H-AT 發射器"],["yg-rocket","首次拿到火箭炮"]]}
+ ]}
+];
+renderGroups("carList",CARS,YG);
+// 第一章要做的事（玫玫物語）：分組 → 項目；q 是我讀到的字幕（[秒, 原句]），imgs 是畫面截圖
+const CH1=[
+ {title:"接露西亞出獄之前",sub:"露西亞好感：五件差事＋修家三處（影片 0:40 到 2:15）",items:[
+  {t:"買雜貨",sec:62,d:"開到蘭托礁島迷你超市（招牌 Leonida Key Lento MINI-MART），到貨架拿完東西去櫃檯結帳，購物袋放進皮卡的後車廂（準備差事的提示「拿取購物袋」）。",q:[[44,"地圖上含有五件選做的準備差事"],[52,"買雜貨、項鍊、花跟拿衣服都會加露西亞的好感"],[62,"買雜貨只要開到蘭托礁島迷你超市"],[67,"去貨架拿完東西到櫃檯結帳"]],imgs:[["c1-errands","地圖（故事選單）上的五件準備差事"],["c1-grocery","字幕：買雜貨只要開到蘭托礁島迷你超市"]]},
+  {t:"理髮",sec:70,d:"去海魅貝麗理髮店。上面那句字幕列出會加好感的是買雜貨、項鍊、花、拿衣服，沒有包含理髮，影片也沒有說理髮會不會加。",q:[[70,"理髮則是去海魅貝麗理髮店"]],imgs:[["c1-haircut","皮卡後車廂放購物袋；字幕：理髮則是去海魅貝麗理髮店"]]},
+  {t:"買項鍊",sec:76,d:"到珠寶店「海妖寶箱」（THE SIREN'S CHEST）選購一條 $475 的項鍊。字幕還說：項鍊到第二章會用到。",q:[[76,"接著到珠寶店海妖寶箱"],[80,"可以選購一條 475 塊的項鍊"],[55,"項鍊到第二章會用到"]],imgs:[["ch1-necklace","故事選單：購買項鍊給露西亞"]]},
+  {t:"買花",sec:81,d:"住宅巷子裡的黃色棚子花攤。",q:[[81,"買花在住宅巷子裡的黃色棚子花攤"]],imgs:[["c1-flowers","黃色棚子花攤前"]]},
+  {t:"拿露西亞的衣服",sec:90,d:"開到海邊的海牛之息酒吧（畫面有 THE KEYS MARINA 招牌）→ 走進戶外酒吧，和露西亞的朋友安蒂會面 → 跟著她穿過船架區，到海灘上舊旅行車的後面 → 回到車上，字幕：說到接露西亞回家。",q:[[90,"開到海邊的海牛之息酒吧"],[94,"走進戶外酒吧跟露西亞的朋友安蒂會面"],[98,"跟著她穿過船架區到海灘的舊旅行車後面"]],imgs:[["c1-clothes","跟著安蒂穿過船架區，海灘上有一台舊旅行車"]]},
+  {t:"修家：屋頂漏水",sec:120,d:"家裡有三處可以修，第一處是修漏水的屋頂。這份好感會一路保留到後面的章節（1:53）。",q:[[122,"要再做的是這三處，首先是修漏水的屋頂"],[113,"這份好感會一路保留到後面的章節"]],imgs:[["c1-roof","屋頂上修補漏水"]]},
+  {t:"修家：刷牆（底漆與油漆）",sec:133,d:"用滾筒刷上底漆再上油漆。",q:[[135,"再用滾筒刷上底漆跟油漆"]]},
+  {t:"修家：屋內臥室",sec:127,d:"字幕：最後進到屋內的臥室。我沒有取樣到臥室裡具體修什麼，請看影片。",q:[[129,"最後進到屋內的臥室"]],warn:"三處的順序是我依字幕片段排的（屋頂、刷牆、臥室），影片時間會有幾秒誤差。"}
+ ]},
+ {title:"處理唐尼的車之前",sub:"唐尼的墨鏡與後車廂左輪（影片 2:17 到 2:56）",items:[
+  {t:"唐尼的墨鏡",sec:137,d:"走進唐尼的拖車，靠近架子上的金框墨鏡會跳出拾取提示（畫面小字：打包唐尼的個人物品）。字幕說這副墨鏡到第二章還會留在衣櫃裡。",q:[[142,"走進拖車裡面"],[147,"靠近上面的金框墨鏡就會跳出拾取提示"],[150,"而且這副墨鏡到第二章還會留在衣櫃裡"]],imgs:[["c1-donny-glasses","拖車內架子上的金框墨鏡"]]},
+  {t:"後車廂的獨特 .38 左輪",sec:158,d:"唐尼拖車旁、停在碎石地上的紅色舊轎車，打開後車廂，裡面放著「唐尼的霍克與立德 .38 左輪手槍」（獨特武器）。撿起來時同時拿到槍與左輪彈藥。這把就是上面「金色武器」那張霍克與立德 .38 卡。",q:[[158,"裡面就放著一把獨特武器"],[165,"撿起來的時候同時拿到槍跟左輪手槍彈藥"],[172,"後車廂這把左輪就拿不到了"]],warn:"字幕說的是處理唐尼的車之後就拿不到，所以要在處理那台車之前拿。",imgs:[["c1-revolver","後車廂畫面右下的提示：唐尼的霍克與立德 .38 左輪手槍"]]}
+ ]},
+ {title:"開始「遊客陷阱」之前",sub:"章末：錢、跑車、收藏（影片 2:56 到 7:20）",items:[
+  {t:"把錢存進家庭儲蓄，保住 $5,000",sec:176,d:"字幕：遊戲裡放錢的地方有四種。進第二章後：身上現金帶不過去；傑森家臥室地板掀開的床下藏匿處也帶不過去；支票帳戶（紫卡）會扣到剩 0；只有元交家庭儲蓄（灰卡）留得住，畫面標示「留住 $5,000」。做法：找一台店門外的紅色自動提款機（我讀到的畫面是夜裡走向店面，旁邊停著 ILL-EAGLE 煙火貨車，導航顯示 78 英尺；提款機本身沒有取樣到），把紫卡裡的錢轉帳到灰卡。到了第二章也不能直接拿這筆餘額去付款買東西。",q:[[188,"遊戲裡放錢的地方有四種"],[196,"還有手機理財 App 元交裡面的家庭儲蓄"],[210,"所以要記得在開始遊客陷阱任務之前把錢保住"],[226,"找一台店門外的紅色自動提款機"],[240,"把紫卡裡的錢轉帳到灰卡"],[256,"到了第二章也不能直接拿這筆餘額去付款買東西"],[272,"買的槍到第二章會收在槍店的武器櫃裡"]],warn:"影片沒有說明 $5,000 是上限還是舉例。另外，字幕最後一句：買的槍到第二章會收在槍店的武器櫃裡，也就是花在槍上的錢不會消失。",imgs:[["c1-money4","放錢的四個地方：身上現金、床下、支票帳戶、家庭儲蓄"],["c1-atm","夜裡走向店面（旁邊是 ILL-EAGLE 煙火貨車）；字幕：找一台店門外的紅色自動提款機"]]},
+  {t:"雪莉的車",sec:287,d:"字幕：這些在開了遊客陷阱任務就會消失（4:50）。我讀到的順序：隔著門柵跟穿粉紅洋裝、抱著小狗的雪莉說話 → 去三醺酒行拿蘭姆酒 → 地圖探索分頁出現下一個差事「偷走代步車」→ 佩姬的粉紅色電動代步車停在藍色樓梯屋旁 → 穿過遮棚，把代步車停進紗窗門廊裡 → 字幕：就會直接解鎖停在旁邊的白色跑車「雪莉的半影使者（Penumbra）」。",q:[[297,"隔著門柵跟穿粉紅洋裝、抱著小狗的雪莉說話"],[311,"就能拿到蘭姆酒"],[344,"地圖的探索分頁就會出現下一個差事偷走代步車"],[352,"就會看到佩姬的粉紅色電動代步車"],[360,"穿過遮棚把代步車停進紗窗門廊裡"],[364,"就會直接解鎖停在旁邊的白色跑車雪莉的半影使者"]],warn:"這段是我拼接字幕得出的順序，兩句之間可能有影片沒取樣到的步驟，請對照影片 4:47 到 6:14。",imgs:[["c1-sherry-fence","雪莉隔著門柵說話"],["c1-scooter","佩姬的粉紅色電動代步車（藍色樓梯屋旁）"],["c1-porch","停好代步車後，旁邊的白色跑車「雪莉的半影使者」解鎖"]]},
+  {t:"三醺酒行藏錢",sec:304,d:"三醺酒行是一家掛著海盜旗的酒類專賣店（在雪莉那一段裡出現）。字幕：一個在酒行的後房（拿蘭姆酒的時候店員還會追進來），在牆腳的蓋板那裡可以拿到 $1,280。字幕說「一個」，暗示還有另一處，我沒取樣到。任務提示：「將蘭姆酒帶去雪莉的家中給她」。",q:[[304,"三醺酒行是一家掛著海盜旗的酒類專賣店"],[312,"拿的時候店員還會追進來"],[320,"一個是在酒行的後房"],[336,"在牆腳的蓋板那裡可以拿到 1280 塊"]],imgs:[["c1-liquor","三醺酒行門口：海盜旗"],["c1-storeroom","後房：任務提示「將蘭姆酒帶去雪莉的家中給她」，店員追進來"],["c1-cash1280","後房牆腳的蓋板：$1,280"]]},
+  {t:"露西亞的冥想邀約",sec:374,d:"字幕：露西亞的冥想邀約只會在第一章某個早上發生；這時候只要當場接受她的邀請，並且增強專注力。影片沒有說是哪一個早上。",q:[[376,"露西亞的冥想邀約只會在第一章某個早上發生"],[384,"這時候只要當場接受她的邀請"],[392,"並且增強專注力"]],imgs:[["c1-meditate","碼頭上的冥想畫面"]]},
+  {t:"五本書與雜誌",sec:400,d:"字幕：傑森家裡裡外外有五本書跟雜誌可以拿，收藏選單的「雜誌、書本和漫畫」會記錄。我讀到的位置：屋子下方的工具間、靠近電視的餐桌上、桌上的《虎鯨部隊勇猛回憶錄》、戶外平台上的健身雜誌《Body Copy》、《榮耀餘燼》（Ashes of Glory，字幕：就再也拿不到了）。五本的完整位置我沒有全部對上。",q:[[400,"接著傑森家裡裡外外有五本書跟雜誌可以拿"],[407,"先去傑森家屋子下方的工具間"],[414,"在靠近電視的餐桌上"],[421,"桌上有一本虎鯨部隊勇猛回憶錄"],[428,"放著一本健身雜誌"],[436,"就再也拿不到了"]],imgs:[["c1-books","收藏 > 探索：雜誌、書本和漫畫"]]}
+ ]},
+ {title:"任務進行中才拿得到",sub:"限定服飾兩件（影片 7:22 到 8:30）",items:[
+  {t:"露西亞的太陽眼鏡",sec:452,d:"主線任務「一日解放」（遊艇上，找馬蒂亞的時候）：欄杆邊會站著一對情侶，跟他們說話，就能拿到一副給露西亞的新太陽眼鏡。這是任務進行到一半才拿得到的限定服飾，要在任務進行當下拿。",q:[[445,"還有兩件是任務進行到一半才拿得到的限定服飾"],[452,"在主線一日解放上遊艇找馬蒂亞的時候"],[460,"欄杆邊會站著一對情侶"],[468,"就能拿到一副給露西亞的新太陽眼鏡"]],imgs:[["c1-lucia-glasses","跟欄杆邊的情侶說話後取得"]]},
+  {t:"安蒂的外套",sec:475,d:"第一章最後有一段逃離警察的劇情：不要自己逃，而是打電話請安蒂來接，從後座上車；到醫院時安蒂會把她的外套借給露西亞。字幕：自己逃的話也拿不到。",q:[[475,"第一章最後有一段"],[482,"而是打電話請安蒂來接"],[490,"從後座上車"],[497,"到醫院的時候安蒂就會把她的外套借給露西亞"],[504,"自己逃的話也拿不到"]],imgs:[["c1-andy-jacket","安蒂在車外：把外套借給露西亞"]]}
+ ]}
+];
+{
+  const host=document.getElementById("ch1List");let n=0;
+  CH1.forEach((g,gi)=>{
+    const det=document.createElement("details");det.className="chap";det.open=true;
+    const start=n;
+    const lis=g.items.map(it=>{
+      n++;const id="ch1-"+n;allIds.push({id,tab:"chapter1"});
+      return `<li class="ck"><b>${it.t}</b><span>${it.d}</span>${(it.q||[]).map(q=>`<span class="q">字幕 ${tm(q[0])}：「${q[1]}」</span>`).join("")}${it.warn?`<span class="warn">${it.warn}</span>`:""}${(it.imgs||[]).map(s=>`<figure class="st"><button type="button" class="zoom" data-full="${F(s[0])}" aria-label="放大：${s[1]}"><img src="${F(s[0])}" alt="${s[1]}" loading="lazy"></button><figcaption>${s[1]}</figcaption></figure>`).join("")}<a class="ytl" href="https://youtu.be/${YC}?t=${it.sec}" target="_blank" rel="noopener noreferrer">▶ 影片 ${tm(it.sec)}</a><button type="button" class="got" data-id="${id}" aria-pressed="${applied[id]?"true":"false"}">已完成</button></li>`;
+    }).join("");
+    det.innerHTML=`<summary><span class="no cnum">${gi+1}</span><span class="ctitle">${g.title}<small>${g.sub}</small></span></summary><div style="padding:0 18px 16px"><ol class="steps" style="counter-reset:s ${start}">${lis}</ol></div>`;
+    det.querySelectorAll(".got").forEach(btn=>{
+      const id=btn.dataset.id;
+      btn.addEventListener("click",()=>{
+        const on=btn.getAttribute("aria-pressed")!=="true";
+        btn.setAttribute("aria-pressed",on?"true":"false");
+        if(on)applied[id]=1;else delete applied[id];
+        save();update();
+      });
+    });
+    host.appendChild(det);
+  });
+}
+// 主線任務：[章名, 英文名, 任務[[中文,英文,可選?]]]；名稱依貼文圖片，非官方譯名
+const MISSIONS=[
+ ["第一章　宛如天堂","Just Like Paradise",[["序章","Prologue"],["出海捕魚","Gone Fishing"],["武裝準備","Gear Up"],["小擦傷","Just a Scratch"],["實驗室費用","Lab Fees"],["不必要的關注","Unwanted Attention"],["水管工程","Pipework"],["嘿，阿諾！","Hey Arnold!"],["海島夢境","Island Dreams"],["風水","Feng Shui"],["回家","Coming Home"],["BuckMe 銀行開戶","Buck Me"],["替唐尼收拾殘局","Clean Up After Donnie"],["腳踏實地","Down to Earth"],["晴朗天空","Clear Skies"],["白天假釋","Day Release"],["深陷沼澤","Swamped"],["唐尼失蹤","Don Gone"],["重新調整","Recalibration"],["遊客陷阱","Tourist Trap"],["甜蜜的家","Home Sweet Home"],["出院時刻","Discharge Time"]]],
+ ["第二章　失落天堂","Paradise Lost",[["袋子裡有什麼？","What's in the Bag?"],["追逐救護車","Ambulance Chaser"],["剛搬進來","Just Moved In"],["姊妹之旅","Girls' Trip"],["摩西","Moses"],["日常座駕","Daily Driver"],["灌籃高手","Slam Dunk"],["早餐外送","Breakfast Run"],["咖啡時間","Coffee Break"],["下午歡愉","Afternoon Delight"],["鄉村狂人","Thrillbillies",1],["扭腕、砸搶","Twist Wrist, Smash, Grab",1],["退房時刻","Checking Out"]]],
+ ["第三章　情色、毒品與黑金","Tits, Ass, Drug Money",[["歡迎來到罪惡都市","Welcome to Vice City"],["經銷商的選擇","Dealer's Choice"],["認識海德一家","Meet the Heders"],["可疑來源","Dubious Provenance"],["媽媽最清楚","Mami Knows Best"],["南雷奧尼達房地產","South Leonida Real Estate"],["泰隆","Tyrone"],["小貓咪，過來","Here, Kitty Kitty"],["貓砂實驗室","Kitty Litter Labs",1],["汽車服務","Car Service"],["頭號主角","Top Billing"],["美胸時刻","Boobie Time"],["第一印象","First Impressions"],["一時失手","Caught Slipping"],["橫越城市的交通","Crosstown Traffic"],["信用審查","Credit Check"],["替蘭迪偷走 Zorrusso","Steal the Zorrusso for Randy"],["辛弗朗特拉國家銀行","Sinfrontera National Bank"],["保安專家","Security Expert"],["生死與共","Ride or Die"],["公司財產","Company Property"],["失落的環節","The Missing Link"],["安全暗號","Safe Word"],["討厭鬼","Cooties"],["被困住了","Bricked Up"],["隱藏費用","Hidden Charges"],["卡特爾搶劫案","The Cartel Heist"]]],
+ ["第四章　罪惡都市，寶貝","Vice City, Baby",[["海灘海灘","Ocean Beach"],["另一種人生","Another Life"],["公司車輛","Company Cars"],["找律師","Lawyer Up"],["狂歡派對","Party Hard"],["重物搬運","Heavy Lifting"],["攝影與槍擊","Photo/Shoot"],["練出肌肉","Making Gainz"],["小心點","Watch It"],["資金注入","Cash Injections"],["菜鳥時刻","Amateur Hour"],["骯髒工作","Dirty Work"],["行李太多","Too Much Baggage"],["保姆歷險記","Adventures in Babysitting"],["新證據","Fresh Evidence"],["權力遊戲","Power Play"],["兒戲","Child's Play"],["頭條人物","Headliners"],["嚴密監視","Close Surveillance"],["交付方式","Delivery Method"],["團隊建設","Team Building"],["全套餐飲服務","Fully Catered"],["擊潰 VCIA","VCIA Takedown"],["日落","Sunset"],["名稱待確認","劇情任務",0,1]]],
+ ["第五章　世界之巔，老媽","Top of the World, Ma",[["唾手可得","Bird in the Hand"],["擅自作主","Taking Liberties"],["罪惡都市寶貝","VC Baby"],["打包袋","Doggie Bag"],["野蠻榮耀行動","Operation Savage Glory"],["保護性拘留","Protective Custody"],["名稱待確認","最終結局任務",0,1]]]
+];
+const ml=document.getElementById("missionList");
+MISSIONS.forEach((c,ci)=>{
+  const det=document.createElement("details");det.className="chap";
+  const sum=document.createElement("summary");
+  sum.innerHTML=`<span class="no cnum">${ci+1}</span><span class="ctitle">${c[0].split("　")[1]}<small>${c[1]}・${c[2].length} 項</small></span>`;
+  det.appendChild(sum);
+  const ul=document.createElement("ul");ul.className="ms";
+  c[2].forEach((m,mi)=>{
+    const id=`mission-${ci+1}-${mi+1}`;allIds.push({id,tab:"missions"});
+    const li=document.createElement("li");if(m[3])li.className="tbd";
+    li.innerHTML=`<button type="button" data-id="${id}" aria-pressed="${applied[id]?"true":"false"}"><span class="tick" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5l3 3 6-7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="no">${mi+1}</span><span class="zh">${m[0]}</span>${m[2]?'<span class="opt">可選</span>':""}<span class="en">${m[1]}</span></button>`;
+    const b=li.querySelector("button");
+    b.addEventListener("click",()=>{
+      const on=b.getAttribute("aria-pressed")!=="true";
+      b.setAttribute("aria-pressed",on?"true":"false");
+      if(on)applied[id]=1;else delete applied[id];
+      save();update();
+    });
+    ul.appendChild(li);
+  });
+  det.appendChild(ul);ml.appendChild(det);
+});
+
+// 導覽：其餘分類（依頁面順序）
+[["tips","開局十件事"],["moves","操作技巧"],["community","社群小技巧與規則"],["#","遊戲進行中"],["wrestle","摔角手與下車技巧"],["chapter1","第一章要做的事"],["missions","主線任務"],["#","工具與事件"],["gtabase","GTABase 地圖用法"],["events","隨機事件與彩蛋"],["#","收集"],["weapons","金色武器"],["hidden","隱藏地點"],["cards","收藏卡片"],["#","載具與賺錢"],["cars","車輛與賺錢"],["money","社群賺錢與載具"]].forEach(([id,label])=>{
+  if(id==="#"){const g=document.createElement("div");g.className="ngrp";g.textContent=label;navEl.appendChild(g);return}
+  const a=document.createElement("a");a.href="#"+id;a.dataset.tab=id;
+  a.innerHTML=`<span>${label}</span><span class="cnt"></span>`;navEl.appendChild(a);
+});
+
+// 圖片放大
+const lb=document.getElementById("lb");
+document.addEventListener("click",e=>{
+  const z=e.target.closest(".zoom");
+  if(z&&lb&&lb.showModal){lb.querySelector("img").src=z.dataset.full;try{lb.showModal()}catch(_){}}
+});
+document.getElementById("lbClose").addEventListener("click",()=>lb.close());
+lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
+
+function update(){
+  const total=allIds.length, done=allIds.filter(x=>applied[x.id]).length;
+  document.getElementById("meterTxt").textContent=`${done} / ${total}`;
+  document.getElementById("meterBar").style.width=(total?done/total*100:0)+"%";
+  document.querySelector(".bar").setAttribute("aria-valuenow",Math.round(total?done/total*100:0));
+  navEl.querySelectorAll("a").forEach(a=>{
+    const ids=allIds.filter(x=>x.tab===a.dataset.tab);
+    a.querySelector(".cnt").textContent=ids.length?`${ids.filter(x=>applied[x.id]).length}/${ids.length}`:"";
+  });
+}
+document.getElementById("reset").addEventListener("click",()=>{
+  if(!Object.keys(applied).length)return;
+  if(!confirm("要清除所有已套用的勾選嗎？"))return;
+  applied={};save();
+  document.querySelectorAll(".row,.got").forEach(r=>r.setAttribute("aria-pressed","false"));
+  update();
+});
+
+// 目前所在分類
+const secs=[...document.querySelectorAll("section.tab[id]")].filter(s=>s.id!=="faq");
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){
+    navEl.querySelectorAll("a").forEach(a=>a.setAttribute("aria-current",a.dataset.tab===e.target.id?"true":"false"));
+  }});
+},{rootMargin:"-20% 0px -70% 0px"});
+secs.forEach(s=>io.observe(s));
+update();
+</script>
+</body>
+</html>
