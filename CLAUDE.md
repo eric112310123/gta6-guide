@@ -31,6 +31,7 @@ HTML 只有各章節的空容器與說明文字，內容由檔尾 `<script>` 內
 - 進度存在 `localStorage` 的 `gta6-guide-applied-v1`（id → 1）；`allIds` 收集所有可勾選項供計數。**更改 id 會讓舊勾選失效**（武器 id 已換過一次）。
 - 導覽列由 JS 依固定順序建立（`[["weapons",…],…]` 陣列，在 `MISSIONS` 渲染之後），新增章節要同步改：HTML `<section id>`、該導覽陣列、頁尾來源清單、首頁 hero 說明文字。
 - 圖片放大用單一 `<dialog id="lb">`，任何 `.zoom[data-full]` 按鈕都會觸發。
+- 「回到頂端」浮動按鈕 `#toTop`（`.totop`，固定在右下角，捲動超過 600px 才顯示，用 `scroll` 事件切換 `.show`）。預覽窗格隱藏時不會觸發 scroll 事件，驗證時要手動 `dispatchEvent(new Event('scroll'))`。
 - 版面：寬度 > 520px 時導覽固定在左側（`.shell` 用 `clamp()` 欄寬），≤ 520px 才改成頂部單列橫向捲動。不要把斷點調回 860px（使用者曾回報導覽被移到上方）。
 
 ## 發布到 GitHub Pages
@@ -44,7 +45,7 @@ HTML 只有各章節的空容器與說明文字，內容由檔尾 `<script>` 內
 
 ## 內容與資料流程
 
-- 圖片在 `assets/`：`frames/`（影片截圖 JPG，命名前綴 somi-、meka-、jc-、yg-、ch1-、c1-、wr-）、`maps/`、`sniper/`、`cards/`、`tips/`。影片截圖版權屬原作者，頁尾已註明。
+- 圖片在 `assets/`：`frames/`（影片截圖 JPG，命名前綴 somi-、meka-、jc-、yg-、ch1-、c1-、wr-、ig-（IG game_tom777 開局必看）、alien-、heist-、ez-、zico-）。截圖前必須確認瀏覽器窗格是「顯示」狀態（`tabs_context` 不再說 hidden、`innerWidth` 不為 0），窗格隱藏時截圖會停在舊畫面，取到的圖會與字幕對不上、`maps/`、`sniper/`、`cards/`、`tips/`。影片截圖版權屬原作者，頁尾已註明。
 - 讀 YouTube 影片的做法：在內建瀏覽器開影片，等廣告播完（不跳過），暫停 `video`，注入 `window.__seek(t)`（跳到 t、播 0.7 到 0.9 秒、暫停），再用 `computer zoom` 截圖播放器區塊。戲院模式播放器約 640×360；把 `#movie_player` 與 `video` 用 CSS 固定成 1024×576 並隱藏其他元素，可取得 800×450 的清楚畫面。描述欄章節可由 `window.ytInitialPlayerResponse.videoDetails.shortDescription` 取得；字幕 API 取不到，只能讀畫面燒錄字幕。
 - 截圖以 PowerShell + `System.Drawing` 把 PNG 轉 JPG（品質 82 到 84）存入 `assets/frames/`。檔名對應只依取樣秒數時，存檔後用 Read 看一眼確認內容，不要憑猜測命名。
 - 內容原則：只寫讀得到的字幕與畫面；沒取樣到的寫「影片沒取樣到」；留言說法標「留言說法・未驗證」；不編造座標（來源沒有座標，改用地圖截圖）。各影片衝突（如 KZ-59 位置）並列並請使用者以實際為準。字幕 `q` 要附秒數，`▶ 影片` 連結用 `https://youtu.be/<id>?t=<秒>`。

@@ -202,7 +202,11 @@ section.tab>p{margin:0 0 24px;color:var(--ink-soft)}
   .row .dots{display:none}
   .row .lab{flex:1 1 60%}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i,.tick{transition:none}}
+.totop{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:50;width:48px;height:48px;border-radius:50%;border:0;background:var(--ink);color:#fff;font:inherit;font-size:1.4rem;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(16,42,58,.35);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.totop.show{opacity:1;visibility:visible;transform:none}
+.totop:hover{background:var(--pink)}
+@media (max-width:520px){.totop{width:44px;height:44px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i,.tick,.totop{transition:none}}
 </style>
 </head>
 <body>
@@ -592,7 +596,19 @@ section.tab>p{margin:0 0 24px;color:var(--ink-soft)}
 
       <details class="chap"><summary><span class="no cnum">1</span><span class="ctitle">開局必看攻略：自動開車、計程車、金幣、救人與事件（影片）<small>Instagram @game_tom777 的 Reel（3 分 7 秒，簡體字幕已轉繁體）</small></span></summary>
         <div style="padding:0 18px 16px">
-          <p class="caveat">取樣約每 7 到 8 秒，句子的前後文有缺；「（）」內是我讀到的畫面。留言區 81 則我沒有讀。</p>
+          <p class="sub2"><b>章節：</b>影片標題只寫「開局必看攻略」（影片開頭字幕「GTA6 開局必看六個攻略」），沒寫第幾章。字幕 1:25 提到「幫唐尼找回包裹的任務時」，我不確定對應哪一章，不猜。</p>
+          <p class="caveat">取樣約每 7 到 8 秒，句子的前後文有缺；「（）」內是我讀到的畫面。留言區 81 則我沒有讀。下方截圖是第二次重看影片補的，時間是畫面實際所在的秒數，字幕為簡體原文。</p>
+          <div class="gal" style="grid-template-columns:repeat(auto-fill,minmax(150px,220px))">
+            <figure><button type="button" class="zoom" data-full="assets/frames/ig-parrot.jpg" aria-label="放大：0:29 消滅黑幫後找鸚鵡對話"><img src="assets/frames/ig-parrot.jpg" alt="0:29 鳥籠旁的主角，字幕：消滅黑幫後，趕快和鸚鵡對話" loading="lazy"></button><figcaption>0:29　字幕：消滅黑幫後，趕快和鸚鵡對話</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ig-shop.jpg" aria-label="放大：0:45 搶店至少 1000 塊"><img src="assets/frames/ig-shop.jpg" alt="0:45 店內後門，字幕：至少也是 1000 塊" loading="lazy"></button><figcaption>0:45　店內（三巡酒行）字幕：至少也是 1000 塊</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ig-coins.jpg" aria-label="放大：0:53 水下金幣"><img src="assets/frames/ig-coins.jpg" alt="0:53 水下，字幕：外面這一圈有三個" loading="lazy"></button><figcaption>0:53　水下，字幕：外面這一圈有三個（前一句：一共 800 美刀）</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ig-diver-shark.jpg" aria-label="放大：1:17 鯊魚與受傷潛水 NPC"><img src="assets/frames/ig-diver-shark.jpg" alt="1:17 鯊魚靠近潛水員，字幕：否則他真的會被鯊魚吃掉" loading="lazy"></button><figcaption>1:17　字幕：否則他真的會被鯊魚吃掉</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ig-donny-map.jpg" aria-label="放大：1:25 地圖，幫唐尼找回包裹的任務時"><img src="assets/frames/ig-donny-map.jpg" alt="1:25 地圖，標記在哈姆雷特西側，字幕：幫唐尼找回包裹的任務時" loading="lazy"></button><figcaption>1:25　地圖（標記在哈姆雷特西側，距離 1.51 英里），字幕：幫唐尼找回包裹的任務時</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ig-plane.jpg" aria-label="放大：1:41 飛機殘骸"><img src="assets/frames/ig-plane.jpg" alt="1:41 燃燒的飛機殘骸，字幕：這失事的飛機殘骸裡" loading="lazy"></button><figcaption>1:41　飛機殘骸，字幕：這失事的飛機殘骸裡（後面：先撿包裹，再打他們）</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ig-skunkape.jpg" aria-label="放大：2:37 臭猿尋人啟事"><img src="assets/frames/ig-skunkape.jpg" alt="2:37 尋人啟事 HAVE YOU SEEN SKUNK APE，字幕：有一個學者正在追蹤人猿" loading="lazy"></button><figcaption>2:37　布告「HAVE YOU SEEN SKUNK APE???」，字幕：有一個學者正在追蹤人猿</figcaption></figure>
+            <figure><button type="button" class="zoom" data-full="assets/frames/ig-club919.jpg" aria-label="放大：2:53 夜店 NINE1N1"><img src="assets/frames/ig-club919.jpg" alt="2:53 夜店 NINE1N1 VICE CITY，字幕：這裡開頭馬蒂亞會邀請吃一勺" loading="lazy"></button><figcaption>2:53　夜店 NINE1N1（VICE CITY），字幕：這裡開頭馬蒂亞會邀請吃一勺</figcaption></figure>
+          </div>
+          <p class="sub2">補讀到的字幕：0:29 消滅黑幫後趕快和鸚鵡對話；1:17 提前在受傷的 NPC 旁邊…否則他真的會被鯊魚吃掉（水下救人）；1:33「一定要去找這個失事的飛機」；1:49「但是切記先撿包裹，再打他們」；1:57「趕快跑，警察來得老快了」；2:05「第五點是一個奇異的內容」；2:13「如果你沒遇到，就在這附近溜達一下」；2:21「也是離遠了先拍照」；3:01「除了一兩個門裡啥都沒有」。人猿布告上的電話號碼是畫面上的告示文字（461-555-0139、CALL KIRK）。</p>
           <ul class="bul">
             <li><b>0:01 到 1:07　自動開車、計程車、打電話：</b>已移到<a href="#moves">操作技巧</a>章的「快速移動」。</li>
             <li><b>1:30 到 1:54　飛機失事事件：</b>已合併到下方「飛機失事事件」。</li>
@@ -613,6 +629,8 @@ section.tab>p{margin:0 0 24px;color:var(--ink-soft)}
 
       <details class="chap"><summary><span class="no cnum">2</span><span class="ctitle">飛機失事事件（救護車、金色狙擊槍）<small>Threads @john_liu818（文字）＋ Instagram @game_tom777 影片 1:30</small></span></summary>
         <div style="padding:0 18px 16px">
+          <p class="sub2"><b>章節：</b>貼文與影片都沒寫章節，也沒有座標。位置只有影片 1:25 的地圖（哈姆雷特西側，見第 1 則截圖），影片沒說那就是飛機失事處。</p>
+          <figure class="st" style="max-width:640px;margin:0 0 12px"><button type="button" class="zoom" data-full="assets/frames/ig-plane.jpg" aria-label="放大：飛機殘骸（影片 1:41）"><img src="assets/frames/ig-plane.jpg" alt="燃燒的飛機殘骸，主角站在旁邊" loading="lazy" style="display:block;width:100%;height:auto;border-radius:10px"></button><figcaption>影片 1:41：燃燒的飛機殘骸，字幕「這失事的飛機殘骸裡」</figcaption></figure>
           <ol class="steps">
             <li><b>看到飛機失事，先拿失事後掉落的東西</b><span>之後會有人開槍，記得先躲在旁邊。</span></li>
             <li><b>等救護車來，救護人員下車後，把救護車開走</b><span>沿著路往外開。</span></li>
@@ -630,6 +648,8 @@ section.tab>p{margin:0 0 24px;color:var(--ink-soft)}
 
       <details class="chap"><summary><span class="no cnum">3</span><span class="ctitle">外星人彩蛋與永久屬性（影片，標題「練全狀態」）<small>Threads @chen.lun.71 轉貼 @game_tom777 的影片（3 分 51 秒，簡體字幕已轉繁體）</small></span></summary>
         <div style="padding:0 18px 16px">
+          <p class="sub2"><b>章節：</b>影片沒寫章節。留言有人問「第三章還可以做嗎」，另一位回「可以」（留言說法・未驗證）。位置：影片 2:15 與 2:30 是地圖畫面（第一個家的上方、污水廠），3:00 提到郡名，但座標沒有，截圖也讀不到地名細節。</p>
+          <figure class="st" style="max-width:420px;margin:0 0 12px"><button type="button" class="zoom" data-full="assets/frames/alien-door.jpg" aria-label="放大：影片 0:44 限制區域門禁"><img src="assets/frames/alien-door.jpg" alt="0:44 限制區域告示旁的門禁，字幕：這個密碼呢是由 1234 四個數字組成的" loading="lazy" style="display:block;width:100%;height:auto;border-radius:10px"></button><figcaption>影片 0:44：RESTRICTED AREA 告示與門禁，字幕「這個密碼呢是由 1234 四個數字組成的」（畫面被頁面框裁掉右側）</figcaption></figure>
           <p class="caveat">影片很暗，約每 15 秒取樣一次，句子只有片段，前後文有缺。</p>
           <ul class="bul">
             <li><b>0:02</b>　字幕：教大家獲得永久的屬性提升。畫面是在健身房跑步機上，左側出現「專注上限已提升」「體力值上限已提升」「生命值上限已提升」三項提示。</li>
@@ -658,6 +678,7 @@ section.tab>p{margin:0 0 24px;color:var(--ink-soft)}
 
       <details class="chap"><summary><span class="no cnum">4</span><span class="ctitle">隕石 $50、蛋白棒回血<small>Threads @archerglimmer，文字</small></span></summary>
         <div style="padding:0 18px 16px">
+          <p class="sub2"><b>章節：</b>貼文沒寫章節，位置也沒說；只有留言（未驗證）提到第二章。貼文只有文字，沒有截圖或地圖可放。</p>
           <ul class="bul">
             <li>貼文：有一顆隕石，賣 $50，走過去就撿得到（位置貼文沒說）。</li>
             <li>作者回覆：遊戲裡可以吃 25 次；一根蛋白棒 $2，餓了或受傷就按 R 吃。</li>
@@ -668,6 +689,7 @@ section.tab>p{margin:0 0 24px;color:var(--ink-soft)}
         </div></details>
       <details class="chap"><summary><span class="no cnum">5</span><span class="ctitle">遊戲情報局兩支短片：搜刮點、隱藏槍械<small>Facebook Reel，畫質很差，只整理讀得到的</small></span></summary>
         <div style="padding:0 18px 16px">
+          <p class="sub2"><b>章節：</b>兩支都只寫「開局」，沒寫第幾章。我沒有在這支 Facebook 短片取到可用的截圖（登入牆把畫面蓋成淡灰色），位置請看原影片。</p>
           <p class="caveat">兩支短片都是 Facebook 的登入牆底下播放，畫面被蓋成淡灰色，字幕很小很淡，我讀到的比其他影片少很多。下面只列我讀得清楚的，其餘請看原影片。</p>
           <h3 style="margin:14px 0 6px;font-size:1.05rem">① 「GTA6 最離譜的搜刮點」（69 秒）</h3>
           <ul class="bul">
@@ -686,6 +708,7 @@ section.tab>p{margin:0 0 24px;color:var(--ink-soft)}
 
       <details class="chap"><summary><span class="no cnum">6</span><span class="ctitle">露西亞在劇情裡丟掉的槍，回到原地還能撿<small>Threads @browniegamer0912，文字與留言（影片沒讀到）</small></span></summary>
         <div style="padding:0 18px 16px">
+          <p class="sub2"><b>章節：</b>貼文沒寫章節、任務名稱與位置。</p>
           <p class="caveat">貼文附了一支影片，但我在預覽裡沒能正確播放出那支影片的畫面，所以只整理貼文文字與留言，影片內容沒讀。</p>
           <ul class="bul">
             <li><b>貼文說法：</b>以為露西亞在劇情裡丟掉的槍只是過場動畫的一部分，結果回到原地，槍居然還在，而且真的可以撿走。</li>
@@ -926,6 +949,7 @@ section.tab>p{margin:0 0 24px;color:var(--ink-soft)}
   </main>
 </div>
 
+<button type="button" class="totop" id="toTop" aria-label="回到頁面頂端" title="回到頂端">↑</button>
 <dialog id="lb" aria-label="圖片放大檢視"><img alt=""><button type="button" id="lbClose">關閉</button></dialog>
 
 <script>
@@ -1374,6 +1398,15 @@ const io=new IntersectionObserver(es=>{
   }});
 },{rootMargin:"-20% 0px -70% 0px"});
 secs.forEach(s=>io.observe(s));
+
+// 回到頂端按鈕：捲動超過一屏後才顯示
+const toTop=document.getElementById("toTop");
+if(toTop){
+  const upd=()=>toTop.classList.toggle("show",window.scrollY>600);
+  window.addEventListener("scroll",upd,{passive:true});
+  toTop.addEventListener("click",()=>{window.scrollTo({top:0});toTop.blur()});
+  upd();
+}
 update();
 </script>
 </body>
